@@ -1,0 +1,36 @@
+
+*{
+    font-family: Inter, Arial, sans-serif;
+}
+
+.fundo{
+    background-color: aquamarine;
+  
+}
+
+.saldo{
+    margin-top: 5em;
+    display:flex;
+    justify-content: center;
+}
+
+.lancamento{
+    margin-top: 8em;
+    display: flex;
+    justify-content: center;
+    padding: 17px;
+}
+
+.btn-main{
+    margin-top: 8em;
+    display: flex;
+    justify-content: center;
+    padding: 17px;
+}
+
+.btn-main .btn{
+    padding-left: 119px;
+    padding-right: 119px;
+    font-size: 30px;
+    border-radius: 50px;
+}
