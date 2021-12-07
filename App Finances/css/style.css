@@ -1,0 +1,91 @@
+:root {
+    --primary-color: #fd951f;
+    --bg-color: #130f0d;
+    --text-color: #f0f0f5;
+    --light-color: rgba(255, 255, 255, 0.04);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Inter', sans-serif !important;
+    height: 100%;
+}
+
+h1 {
+    font-weight: bold !important;
+}
+
+body {
+    background-color: rgb(204, 204, 204) !important;
+}
+
+header {
+    padding: 25px;
+    background-color: rgb(12, 165, 165)
+}
+
+.login {
+    align-self: flex-end;
+}
+
+.nome-usuario {
+    align-self: flex-end;
+    margin-bottom: 23px;
+}
+
+.icone-login {
+    height: 80px;
+}
+
+.container-saldo {
+    background: rgba(245, 245, 245, 0.5);
+
+    border-radius: 5px;
+    
+    width: 100%;
+    max-width: 500px;
+
+    margin: 50px auto;
+    padding: 32px 64px;
+    
+    transition: 0.3s;
+}
+
+/* .container-saldo:hover {
+    box-shadow: 3px 3px gray;
+} */
+
+.lancamentos {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 20px;
+    border: 2px solid rgb(255, 200, 0);
+    border-radius: 15px !important;
+    background-color: rgb(255, 200, 0);
+    font-weight: bold;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.navigation{
+    display: none;
+}
+
+footer {
+    margin-top: 40px;
+    height: 150px;
+    background-color: rgb(12, 136, 136);
+}
+
+.footer-natal {
+    height: 150px;
+    padding-left: 100px;
+}
