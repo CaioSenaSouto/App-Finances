@@ -23,11 +23,11 @@ div.input {
 }
 
 input {
-    background: rgba(245, 245, 245, 0.5);
+    background: rgba(245, 245, 245, 0.9);
 }
 
 .valor,
-.data {
+.data { 
     position: absolute;
     top: 0px;
     left: 35px;

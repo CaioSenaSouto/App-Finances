@@ -37,11 +37,11 @@ main {
   padding: 2rem;
   font-size: 20px;
 }
-
-p,
+ p,
 #dinheiro {
-  padding-top: 2rem;
-}
+  /* padding-top: 2rem; */
+  margin-bottom: 0;
+} 
 
 /* Tabelas */
 table {
@@ -67,13 +67,17 @@ td {
   text-align: center;
 }
 
+tr{
+  background: rgba(245, 245, 245, 0.9);
+}
+
 section {
   margin-top: 10px;
 }
 
 /* mobile */
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { 
   .balance {
     width: 80%;
   }

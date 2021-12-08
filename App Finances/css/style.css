@@ -34,7 +34,7 @@ header {
 }
 
 .nome-usuario {
-    align-self: flex-end;
+    align-self: flex-end; 
     margin-bottom: 23px;
 }
 
@@ -43,7 +43,7 @@ header {
 }
 
 .container-saldo {
-    background: rgba(245, 245, 245, 0.5);
+    background: rgba(245, 245, 245, 0.9);
 
     border-radius: 5px;
     
