@@ -75,6 +75,11 @@ button {
     font-family: 'Inter', sans-serif !important;
 }
 
+#botaozinho a{
+    text-decoration: none;
+    color: inherit;
+}
+
 .navigation{
     display: none;
 }
@@ -89,3 +94,10 @@ footer {
     height: 150px;
     padding-left: 100px;
 }
+
+@media (max-width: 768px) {
+    .footer-natal {
+      height: 75px;
+      padding-left: 50px;
+    }
+  }
