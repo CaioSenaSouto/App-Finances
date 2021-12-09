@@ -14,12 +14,13 @@ div.input {
     padding: 5px;
 }
 
-
+.container-desc {
+    margin-top: 15px;
+}
 
 #desc {
     border: none;
     height: 80px;
-    /* margin-top: 10px; */
     width: 500px;
     border-radius: 5px;
     padding: 5px;
@@ -49,7 +50,8 @@ input {
 input:focus~label,
 input:valid~label {
     transform: translateY(-24px);
-    font-size: 0.8em;
+    font-size: 13px;
+    font-weight: bold;
     letter-spacing: 0.1em;
 }
 

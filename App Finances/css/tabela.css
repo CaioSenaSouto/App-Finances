@@ -1,48 +1,19 @@
-body {
-  background-color: var(--cinza_claro);
-}
-
-main {
-  display: flex;
-  justify-content: center;
-}
-
-.balance {
-  display: flex;
-  width: 50%;
-  margin: -20px auto;
-}
-
-.cor-texto {
-  color:white;
-}
-
-.card {
-  background-color: rgba(245, 245, 245, 0.9);
-  border-radius: 5px;
-  width: 100%;
-  max-width: 500px;
-  margin: 50px auto;
-
-  font-size: 18px;
-}
-p,
-#dinheiro {
-  margin-bottom: 0;
-  font-size: 150%;
-}
-
-
-table {
-  width: 70%;
-  max-width: 500px;
-  margin: 15px auto;
-  font-size: 17px;
+table { 
+  border-collapse: collapse;
+  max-width: 700px;
+  margin: 30px auto;
+  font-size: 15px;
   table-layout: fixed;
+
+  overflow:hidden;
+  border: solid #ccc 1px;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
 }
 
 th {
-  padding: 0.7em;
+  padding: 10px 10px;
   margin: 7 auto;
   text-align: justify;
   font-weight: bold;
@@ -50,22 +21,47 @@ th {
 
 td {
   word-break: break-word;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 15px;
   background-color: rgba(245, 245, 245, 0.9);
   border: 1px solid #ccc;
-  padding: 0.4em;
-  text-align:justify;
+  padding: 5px 10px;
+  line-height: 25px;
 }
 
 tr {
   background: rgba(230, 226, 226, 0.9);
 }
 
-section {
-  margin-top: 10px;
+tr.itens td {
+  border-bottom: 2px solid #ccc;
 }
 
+tr.itens td.entrada{
+  border-left: 20px solid rgb(2, 221, 2);
+}
+
+tr.itens td.saida{
+  border-left: 20px solid rgb(255, 56, 56);
+}
+
+#lapis,
+#lixeira {
+  width: 18px;
+  margin: 0 5px;
+}
+
+td:first-child { 
+  width: 230px;
+}
+td:first-child + td {  
+  width: 100px 
+}
+td:first-child + td + td {
+    width: 120px 
+}
+td:first-child + td + td +td {
+  width: 100px 
+}
 
 @media (max-width: 768px) {
   .balance {
