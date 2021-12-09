@@ -55,18 +55,6 @@ input:valid~label {
     letter-spacing: 0.1em;
 }
 
-.input span.error {
-    display: flex;
-    padding: 0;
-    background-color: rgba(255, 0, 0, 0.2);
-    font-size: 0.8em;
-}
-
-.input span.error.active {
-    border: 1px solid red;
-    padding: 0.4em;
-}
-
 .entrada {
     margin: 0 20px;
 }
