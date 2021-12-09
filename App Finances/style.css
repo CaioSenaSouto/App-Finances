@@ -2,17 +2,27 @@
     background-color: aquamarine;
 }
 
+.cor-texto {
+    color: white;
+}
+
 .saldo {
-    margin-top: 5em;
     display: flex;
     justify-content: center;
 }
 
 .lancamento {
-    margin-top: 8em;
     display: flex;
     justify-content: center;
     padding: 17px;
+}
+
+.texto-centralizado {
+    text-align: center
+}
+
+.imagem-astronauta {
+    height: 250px;
 }
 
 .btn-main {
@@ -25,7 +35,6 @@
 .btn-main .btn {
     padding-left: 119px;
     padding-right: 119px;
-    font-size: 30px; 
+    font-size: 30px;
     border-radius: 50px;
 }
-

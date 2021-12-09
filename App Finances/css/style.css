@@ -75,6 +75,16 @@ button {
     font-family: 'Inter', sans-serif !important;
 }
 
+button:hover {
+    background-color: #e6b400!important;
+    font-size: 103%;
+}
+
+button:active {
+    color: rgb(12,165,165);
+    border-color: rgb(12,165,165);
+}
+
 #botaozinho a{
     text-decoration: none;
     color: inherit;
@@ -86,18 +96,19 @@ button {
 
 footer {
     margin-top: 40px;
-    height: 150px;
+    height: 200px;
     background-color: rgb(12, 136, 136);
 }
 
-.footer-natal {
-    height: 150px;
-    padding-left: 100px;
+.treno {
+    align-self: center;
+    overflow: hidden;
 }
 
-@media (max-width: 768px) {
+
+/* @media (max-width: 768px) {
     .footer-natal {
       height: 75px;
       padding-left: 50px;
     }
-  }
+  } */
