@@ -15,10 +15,9 @@ function validacao(e) {
     }
 
     const erro = verificandoErro()
-    console.log("Erro encontrado: ", erro)
 
     if (erro) {
-        campo.setCustomValidity("Hey, não esquece de me preencher :(")
+        campo.setCustomValidity("Hey, não esquece de mim :(")
         campo.style.border = "3px solid rgb(255, 56, 56)"
     } else {
         campo.setCustomValidity("")
