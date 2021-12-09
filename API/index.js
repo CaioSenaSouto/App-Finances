@@ -7,7 +7,7 @@ app.use(express.json())
 
 //get para testar
 app.get('/lancamentos', function(req,res){
-    res.send('Olá grupo 5')
+    res.send('Buscar lamençamentos')
 })
 
 
