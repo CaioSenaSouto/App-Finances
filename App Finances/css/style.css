@@ -56,9 +56,9 @@ header {
     transition: 0.3s;
 }
 
-/* .container-saldo:hover {
-    box-shadow: 3px 3px gray;
-} */
+/* .container-saldo:hover { */
+    /* box-shadow: 3px 3px gray;  */
+/* }  */
 
 .lancamentos {
     margin-bottom: 30px;
@@ -98,6 +98,7 @@ footer {
     margin-top: 40px;
     height: 200px;
     background-color: rgb(12, 136, 136);
+    padding-left: 50px;
 }
 
 .treno {

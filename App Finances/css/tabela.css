@@ -13,6 +13,10 @@ main {
   margin: -20px auto;
 }
 
+.cor-texto {
+  color:white;
+}
+
 .card {
   background-color: rgba(245, 245, 245, 0.9);
   border-radius: 5px;
@@ -25,20 +29,22 @@ main {
 p,
 #dinheiro {
   margin-bottom: 0;
+  font-size: 150%;
 }
 
+
 table {
-  width: 50%;
+  width: 70%;
   max-width: 500px;
-  margin: 10px auto;
-  font-size: 18px;
+  margin: 15px auto;
+  font-size: 17px;
   table-layout: fixed;
 }
 
 th {
-  padding: 0.2em;
-  margin: 0 auto;
-  text-align: center;
+  padding: 0.7em;
+  margin: 7 auto;
+  text-align: justify;
   font-weight: bold;
 }
 
@@ -49,7 +55,7 @@ td {
   background-color: rgba(245, 245, 245, 0.9);
   border: 1px solid #ccc;
   padding: 0.4em;
-  text-align: center;
+  text-align:justify;
 }
 
 tr {
