@@ -1,0 +1,26 @@
+{
+  "name": "App-Finances",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./api.js localhost 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CaioSenaSouto/App-Finances.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CaioSenaSouto/App-Finances/issues"
+  },
+  "homepage": "https://github.com/CaioSenaSouto/App-Finances#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.1.0",
+    "nodemon": "^2.0.15"
+  }
+}
