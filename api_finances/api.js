@@ -1,21 +1,27 @@
-// config inicial
 const express = require('express')
 const app = express()
+const mongoose = require('mongoose');
+const porta = 3000
 
-// forma de ler JSON / middlewares
 app.use(
   express.urlencoded({
     extended: true
   })
 )
-
-app.use(express.json())
-
-// rota inicial / endpoint
-app.get('/', (req, res) => {
-  // mostrar req
-
-  res.json({ message: 'Hello Express!' })
+//get para testar
+app.get('/lancamentos', function(req,res){
+    res.send('Buscar lamençamentos')
 })
-// entregar uma porta
-app.listen(3000)
+
+
+//conectando o index ao banco de dados usando o código a baixo
+mongoose.connect('mongodb://localhost/financa').then(function(){
+    console.log(`Conectado ao banco de dados`)
+
+    app.listen(porta, function() {
+        console.log(`rodando app na url http://localhost:${porta}/lancamentos`)
+    })
+
+}).catch(function(erro){
+    console.log(`Falha ao conectar-se:${erro}`)
+})
