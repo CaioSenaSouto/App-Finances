@@ -50,7 +50,7 @@
         <form action="">    
             <div class="d-flex justify-content-center align-items-center responsividade">
                 <div class="input">
-                    <input id="valor" required placeholder="15.50" type="number" min="0" step="0.01">
+                    <input id="valor" required placeholder="15.50" type="text" min="0" onkeyup="formatarEntrada()">
                     <label class="valor" for="valor">Valor</label>
                     <span class="error"></span>
                 </div>
