@@ -47,7 +47,12 @@
             </div>
         </section>
 
-        <form action="">    
+        <form action="">
+            <div class="input d-flex justify-content-center">
+                <label class="entrada" for="radio-entrada"><input type="radio" name="opcao" id="radio-entrada" required> Entrada de Dinheiro</label>
+                <label class="saida" for="radio-saida"><input type="radio" name="opcao" id="radio-saida" required> Saída de Dinheiro</label>
+            </div>
+
             <div class="d-flex justify-content-center align-items-center responsividade">
                 <div class="input">
                     <input id="valor" required placeholder="15.50" type="text" min="0" onkeyup="formatarEntrada()">
@@ -68,14 +73,9 @@
                     <span class="error"></span>
                 </div>
             </div>
-
-            <div class="input d-flex justify-content-center">
-                <label class="entrada" for="radio-entrada"><input type="radio" name="opcao" id="radio-entrada" required> Entrada de Dinheiro</label>
-                <label class="saida" for="radio-saida"><input type="radio" name="opcao" id="radio-saida"> Saída de Dinheiro</label>
-            </div>
     
-            <button class="d-grid gap-2 mx-auto" type="submit"><a href="./tabela.html">Cadastrar</a></button>
-            <!-- <button class="d-grid gap-2 mx-auto" type="submit">Cadastrar</button> -->
+            <!-- <button class="d-grid gap-2 mx-auto" type="submit"><a href="./tabela.html">Cadastrar</a></button> -->
+            <button class="d-grid gap-2 mx-auto" type="submit" id="botao-cadastro">Cadastrar</button>
            </form>
 
         <footer class="footer-natal d-flex flex-column justify-content-center">
