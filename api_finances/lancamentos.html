@@ -50,7 +50,7 @@
         <form action="">
             <div class="input d-flex justify-content-center">
                 <label class="entrada" for="radio-entrada"><input type="radio" name="opcao" id="radio-entrada" required> Entrada de Dinheiro</label>
-                <label class="saida" for="radio-saida"><input type="radio" name="opcao" id="radio-saida" required> Saída de Dinheiro</label>
+                <label class="saida" for="radio-saida"><input type="radio" name="opcao" id="radio-saida" onclick="radioBox()" required> Saída de Dinheiro</label>
             </div>
 
             <div class="d-flex justify-content-center align-items-center responsividade">
@@ -74,9 +74,13 @@
                 </div>
             </div>
     
-            <!-- <button class="d-grid gap-2 mx-auto" type="submit"><a href="./tabela.html">Cadastrar</a></button> -->
+            <!-- <button class="d-grid gap-2 mx-auto" id="botao-cadastro" type="submit"><a href="./tabela.html">Cadastrar</a></button> -->
+
             <button class="d-grid gap-2 mx-auto" type="submit" id="botao-cadastro">Cadastrar</button>
            </form>
+
+           <!-- <button class="d-grid gap-2 mx-auto" id="botao-cadastro" type="submit"><a href="./tabela.html">Cadastrar</a></button> -->
+
 
         <footer class="footer-natal d-flex flex-column justify-content-center">
             <img class="treno" alt="silhueta de um trenó de natal sendo puxado por renas" src="assets/pngwing.com2.png">
