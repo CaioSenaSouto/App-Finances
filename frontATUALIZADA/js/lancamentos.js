@@ -9,6 +9,7 @@ function validacao(e) {
         for(let erro in campo.validity) {
             if (erro != "customError" && campo.validity[erro] && erro!= "valid") {
                 erroEncontrado = erro;
+                break
             }
         }
         return erroEncontrado;
