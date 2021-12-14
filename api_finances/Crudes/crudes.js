@@ -9,7 +9,7 @@ exports.novoCliente = (req, res) => {
 
 cliente.save((erro, cadastro)=> {
     if(erro){
-        res.status(400).send({erro})
+        res.status(400).send({erro: "Por favor preencha todos os campos"})
     } else{
         res.status(201).send({cadastro})
     }

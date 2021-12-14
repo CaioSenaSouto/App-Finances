@@ -22,7 +22,8 @@ app.use(
 
 
 //conectando o index ao banco de dados usando o código a baixo
-mongoose.connect('mongodb://localhost/financa').then(function(){
+const mongoUri='mongodb+srv://martaTonet:Constantina1!@cluster0.achaz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+mongoose.connect(mongoUri).then(function(){
     console.log(`Conectado ao banco de dados`)
 
     app.listen(porta, function() {
