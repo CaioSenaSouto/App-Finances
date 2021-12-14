@@ -31,7 +31,7 @@ mongoose.connect(mongoUri).then(function(){
     })
 
 }).catch(function(erro){
-    console.log(`Falha ao conectar-se:${erro}`)
+    console.log(`Falha ao conectar-se:${erro}`) 
 })
 
 
