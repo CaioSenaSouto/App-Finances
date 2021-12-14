@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 const porta = 3000
 
 app.use(express.json())
@@ -10,7 +10,6 @@ const Person = require('./models/Person')
 const rotas = require('./Rotas/rotas')
 rotas(app)
 
-
 // forma de ler JSON / middlewares
 
 app.use(
@@ -19,21 +18,22 @@ app.use(
   })
 )
 
-
-
 //conectando o index ao banco de dados usando o código a baixo
-const mongoUri='mongodb+srv://martaTonet:Constantina1!@cluster0.achaz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
-mongoose.connect(mongoUri).then(function(){
+const mongoUri =
+  'mongodb+srv://Time05:%40qEmd9Ntf!cKt.A@apicluster.klywl.mongodb.net/bancodaapi?retryWrites=true&w=majority'
+// const mongoUri='mongodb+srv://martaTonet:Constantina1!@cluster0.achaz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+mongoose
+  .connect(mongoUri)
+  .then(function () {
     console.log(`Conectado ao banco de dados`)
 
-    app.listen(porta, function() {
-        console.log(`rodando app na url http://localhost:${porta}/lancamentos`)
+    app.listen(porta, function () {
+      console.log(`rodando app na url http://localhost:${porta}/lancamentos`)
     })
-
-}).catch(function(erro){
-    console.log(`Falha ao conectar-se:${erro}`) 
-})
-
+  })
+  .catch(function (erro) {
+    console.log(`Falha ao conectar-se:${erro}`)
+  })
 
 // @qEmd9Ntf!cKt.A
 
@@ -58,4 +58,3 @@ mongoose.connect(mongoUri).then(function(){
 // app.get('/lancamentos', (req, res) => {
 //   res.send({ message: 'Hello Express!' })
 // })
-
