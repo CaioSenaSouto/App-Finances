@@ -35,3 +35,6 @@ mongoose
   .catch(function (erro) {
     console.log(`Falha ao conectar-se:${erro}`)
   })
+
+const path = require("path");
+app.use("/",express.static(path.join(__dirname, "../frontATUALIZADA")));

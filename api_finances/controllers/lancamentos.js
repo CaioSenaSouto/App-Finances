@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Transacao = mongoose.model('transacao');
+const Transacao = mongoose.model('lancamento');
 
 
 //tentar usar email do path
