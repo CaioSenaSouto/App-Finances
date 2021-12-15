@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
+require('dotenv').config()
+const porta = 3000
 
 app.use(express.json())
 
@@ -20,9 +22,8 @@ app.use(
 )
 
 //conectando o index ao banco de dados usando o código a baixo
-const DB_USER = 'Time05'
-const DB_PASSWORD = encodeURIComponent('@qEmd9Ntf!cKt.A')
-const porta = 3000
+const DB_USER = process.env.DB_USER
+const DB_PASSWORD = encodeURIComponent(process.env.DB_PASSWORD)
 
 mongoose
   .connect(
