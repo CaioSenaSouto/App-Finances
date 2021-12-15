@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 const schema = mongoose.Schema;
 
-const lancamento = new schema({
+const transaction = new schema({
   email: {type: String, required:true},
-  valor: {type: Double, required:true},
-  data: {type:Date, default: Date.now},
-  descricao: {type: String, require: true}
+  valor: {type: Number, required:true},
+//   data: {type:Date, default: Date.now},
+  data: {type:Date, required:true},
+  descricao: {type: String, require:true}
 });
 
-//Criando a colletion com nome clientes
-module.exports = mongoose.model("lancamentos", lancamento)
+module.exports = mongoose.model("transaction", transaction)
