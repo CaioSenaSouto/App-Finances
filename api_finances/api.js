@@ -7,7 +7,7 @@ app.use(express.json())
 
 const Person = require('./models/people')
 
-const Transaction = require('./models/lancamentos')
+const Transacao = require('./models/lancamentos')
 
 const rotas = require('./Rotas/rotas')
 rotas(app)

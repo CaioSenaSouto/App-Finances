@@ -11,9 +11,9 @@ module.exports  = function(app) {
     app.route('/people/:id').put(peopleCrudes.atualizar)
     app.route('/people/:id').delete(peopleCrudes.apagar)
     app.route('/people/:email/transaction').post(transactionCrudes.novoLancamento)    
-    // app.route('/people/:email/transaction').get(transactionCrudes.busca)    
-    // app.route('/people/:email/transaction/:id').get(transactionCrudes.buscaId)   
-    // app.route('/people/:email/transaction/:id').put(transactionCrudes.buscaId)   
-    // app.route('/people/:email/transaction/:id').delete(transactionCrudes.buscaId)   
+    app.route('/people/:email/transaction').get(transactionCrudes.busca)    
+    app.route('/people/:email/transaction/:id').get(transactionCrudes.buscaId)   
+    app.route('/people/:email/transaction/:id').put(transactionCrudes.buscaId)   
+    app.route('/people/:email/transaction/:id').delete(transactionCrudes.buscaId)   
 
 }

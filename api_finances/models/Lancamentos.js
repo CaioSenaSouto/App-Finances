@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const schema = mongoose.Schema;
 
-const transaction = new schema({
+const Transacao = new schema({
   email: {type: String, required:true},
   valor: {type: Number, required:true},
 //   data: {type:Date, default: Date.now},
@@ -9,4 +9,4 @@ const transaction = new schema({
   descricao: {type: String, require:true}
 });
 
-module.exports = mongoose.model("transaction", transaction)
+module.exports = mongoose.model("transacao", Transacao)

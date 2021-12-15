@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
-const people = mongoose.model('people');
+const pessoa = mongoose.model('pessoa');
 
 
 
 // código  post de cadastro do cliente
 exports.novoCliente = (req, res) => {
-    let cliente = new people(req.body)
+    let cliente = new pessoa(req.body)
 
     cliente.save((erro, cliente) => {
         if (erro) {
@@ -19,7 +19,7 @@ exports.novoCliente = (req, res) => {
 
 // Código get all para buscar todos os cadastros
 exports.busca = (req, res) => {
-    people.find({}, (erro, cliente) => {
+    pessoa.find({}, (erro, cliente) => {
         if (erro) {
             res.status(404).send({ erro: 'Nenhum registro encontarado' })
         } else {
@@ -30,7 +30,7 @@ exports.busca = (req, res) => {
 
 //fazendo get por id
 exports.buscaId = (req, res) => {
-    people.findOne({ '_id': req.params.id }, function (erro, cliente) {
+    pessoa.findOne({ '_id': req.params.id }, function (erro, cliente) {
         if (erro) {
             res.status(404).send({ erro: 'Dados não encontrado' })
         } else {
@@ -41,7 +41,7 @@ exports.buscaId = (req, res) => {
 
 //Código update para atualizar dados
 exports.atualizar = (req, res) => {
-    people.findOneAndUpdate({ '_id': req.params.id }, req.body, { new: true }, function (erro, atualizado) {
+    pessoa.findOneAndUpdate({ '_id': req.params.id }, req.body, { new: true }, function (erro, atualizado) {
         if (erro) {
             res.status(400).send({ erro: 'Não atualizado' })
         } else {
@@ -52,7 +52,7 @@ exports.atualizar = (req, res) => {
 
 //Código delete para deletar
 exports.apagar = (req, res) => {
-    people.deleteOne({ _id: req.params.id }, function (erro, deletado) {
+    pessoa.deleteOne({ _id: req.params.id }, function (erro, deletado) {
         if (erro) {
             res.status(400).send({ erro: 'Cliente não encontrado' })
         } else {

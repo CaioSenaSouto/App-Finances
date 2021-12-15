@@ -10,4 +10,4 @@ const pessoa = new schema({
 });
 
 //Criando a colletion com nome clientes
-module.exports = mongoose.model("people", pessoa)
+module.exports = mongoose.model("pessoa", pessoa)
