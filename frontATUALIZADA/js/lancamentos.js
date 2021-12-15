@@ -90,3 +90,53 @@ function formatarEntrada() {
     // (valorEntrada).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 }
 
+async function acessaAPI () {
+    console.log("entrou na function")
+    try {
+        const resposta = await fetch("http://localhost:3000/people")
+        console.log(resposta)
+        const data = await resposta.json()
+        console.log(data)
+    } catch (error) {
+       console.log(error) 
+    }
+}
+
+acessaAPI()
+
+async function acessaAPILancamentos () {
+    console.log("entrou na function")
+    try {
+        const resposta = await fetch("http://localhost:3000/people/:email/transaction")
+        console.log(resposta)
+        const data = await resposta.json()
+        console.log(data)
+    } catch (error) {
+       console.log(error) 
+    }
+}
+
+acessaAPILancamentos()
+
+// const searchCep = (cep) => {
+//     fetch(`https://viacep.com.br/ws/${cep}/json/`)
+//     .then(x => x.text())
+//     .then(JSON.parse)
+//     .then(data => {
+//         document.getElementById("logradouro").innerHTML = `<pre>
+//         Logradouro: ${data.logradouro}
+//         Cep       : ${data.cep}
+//         Bairro    : ${data.bairro} 
+//         Localidade: ${data.localidade}</pre>`;
+//     })
+// };
+
+// try {
+//     const resposta = await fetch("http://localhost:3000/")
+//     console.log(resposta)
+//     const data = await resposta.json()
+//     exibe(data)
+// } catch (error) {
+//    console.log(error) 
+// }
+// }
