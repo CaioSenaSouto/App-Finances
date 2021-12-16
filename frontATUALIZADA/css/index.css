@@ -1,8 +1,9 @@
 .lancamentos {
     margin-bottom: 30px;
-    font-size: 18px;
+    font-size: 2rem;
 }
 
 .imagem-astronauta {
-    height: 250px;
+    height: 15.0rem;
+    margin-bottom: 5rem;
 }

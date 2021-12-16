@@ -21,24 +21,19 @@
 
 <body>
     <header>
-        <div class="d-flex bd-highlight mb-3">
-            <div class="p-2 bd-highlight">
-                <img class="icone-login" src="assets/neon_site_ep1A+1.png" alt="Desenho de uma menina abraçando uma moeda">
-            </div>
-            <div class="p-2 bd-highlight align-self-end cor-texto">
-                <h2>Meus Lançamentos</h2>
-            </div>
-            
-            <div class="ms-auto p-2 bd-highlight login">
-                <h5 class="cor-texto">nome_usuario</h5>
-            </div>
-            <div class="p-2 bd-highlight login">
-                <a href="#">
-                    <img class="icone-login align-self-end" src="assets/neon_site_ep2-min.png" alt="Ícone de um boneco">
-                </a>
-            </div>
+        <div class="p-2 bd-highlight">
+            <img class="icone-login" src="assets/neon_site_ep1A+1.png" alt="Desenho de uma menina abraçando uma moeda">
         </div>
-    </header>
+        <div class="texto-header">
+            <h5 class="p-2 bd-highlight cor-texto">Meus Lançamentos</h5>
+            <h5 class="p-2 bd-highlight login cor-texto">nome_usuario</h5>
+        </div>
+        <div class="p-2 bd-highlight login">
+            <a href="#">
+                <img class="icone-login" src="assets/neon_site_ep2-min.png" alt="Ícone de um boneco">
+            </a>
+        </div>
+</header>
 
     <section class="saldo">
         <div class="d-flex flex-column align-items-center container-saldo">
@@ -47,52 +42,29 @@
         </div>
     </section>
 
-    <table>
+    <table id="table">
+        <thead>
         <tr>
             <th>Título</th>
             <th>Custo</th>
             <th>Data</th>
             <th>Ações</th>
         </tr>
-        <tr class="itens">
-            <td class="info-titulo entrada"> entrada de salário </td>
-            <td class="info-custo">R$ 0,00 </td>
-            <td class="info-data"> 09/12/2021 </td>
-            <td>
-                <a href="#">
-                    <img id="lapis" src="./assets/Vector.svg" alt="imagem de um lápis">
-                </a>
-                <a href="#">
-                    <img id="lixeira" src="./assets/lixo.svg" alt="imagem de uma lixeirinha">
-                </a>
-            </td>
-        </tr>
-        <tr class="itens">
-            <td class="info-titulo saida"> saída de dinheiro </td>
-            <td class="info-custo">R$ 0,00 </td>
-            <td class="info-data"> 09/12/2021 </td>
-            <td>
-                <a href="#">
-                    <img id="lapis" src="./assets/Vector.svg" alt="imagem de um lápis">
-                </a>
-                <a href="#">
-                    <img id="lixeira" src="./assets/lixo.svg" alt="imagem de uma lixeirinha">
-                </a>
-            </td>
-        </tr><tr class="itens">
-            <td class="info-titulo saida"> saída de dinheiro </td>
-            <td class="info-custo">R$ 0,00 </td>
-            <td class="info-data"> 09/12/2021 </td>
-            <td>
-                <a href="#">
-                    <img id="lapis" src="./assets/Vector.svg" alt="imagem de um lápis">
-                </a>
-                <a href="#">
-                    <img id="lixeira" src="./assets/lixo.svg" alt="imagem de uma lixeirinha">
-                </a>
-            </td>
-        </tr>
-        
+        </thead>
+        <tbody>
+            <tr class="itens">
+                <td class="info-titulo entrada"> entrada de salário </td>
+                <td class="info-custo">R$ 0,00 </td>
+                <td class="info-data"> 09/12/2021 </td>
+                <td>
+                    <a href="#">
+                        <img id="lapis" src="./assets/Vector.svg" alt="imagem de um lápis">
+                    </a>
+                    <a href="#">
+                        <img id="lixeira" src="./assets/lixo.svg" alt="imagem de uma lixeirinha">
+                    </a>
+                </td>
+    </tbody>
     </table>
 
     <button class="d-grid gap-2 mx-auto" type="submit"> <a href="lancamentos.html">+ Lançamento</a></button>
@@ -101,6 +73,7 @@
         <img class="treno" alt="silhueta de um trenó de natal sendo puxado por renas" src="assets/pngwing.com2.png">
         <p class="cor-texto copyright align-self-center"> &copy; App-Finances</p>
     </footer>
+    <script src="./js/tabela.js"></script>
 
 </body>
 
