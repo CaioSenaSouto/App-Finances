@@ -10,29 +10,39 @@ html {
     height: 100%;
 }
 
-header {
-    padding: 25px;
-    background-color: rgb(12, 165, 165)
-}
-
-.login {
-    align-self: flex-end;
-}
-
-.icone-login {
-    height: 80px;
-}
 
 body {
     background-color: var(--bg-color) !important;
 }
 
-.cor-texto {
-    color: white;
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 1.0rem;
+    background: rgb(12,165,165);
+    background: linear-gradient(90deg, rgba(12,165,165,1) 0%, rgba(5,93,176,1) 50%, rgba(12,165,165,1) 100%); 
 }
 
-.texto-centralizado {
-    text-align: center
+.texto-header{
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+}
+
+/* .login {
+    align-self: flex-end;
+} */
+
+.icone-login{
+    height: 80px;
+    justify-content: space-between;
+}
+
+.cor-texto {
+    font-size: 2rem;
+    color: white;
 }
 
 .container-saldo {
@@ -44,8 +54,17 @@ body {
     padding: 32px 64px;
 }
 
+.saldo{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 p,
 #dinheiro {
+  text-align: center;
   margin-bottom: 0;
   font-size: 150%;
 }
@@ -75,18 +94,94 @@ button a {
     color: inherit;
 }
 
+.texto-centralizado {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    text-align: center
+}
+
 footer {
     margin-top: 40px;
     height: 200px;
-    background-color: rgb(12, 136, 136);
+    background: rgb(12,165,165);
+    background: linear-gradient(90deg, rgba(12,165,165,1) 0%, rgba(5,93,176,1) 50%, rgba(12,165,165,1) 100%);
     padding: 10px 0;
 }
 
 .copyright {
-    font-size: 18px;
+    font-size: 2rem;
 }
 
 .treno {
     align-self: center;
     overflow: hidden;
 }
+
+@media screen and (max-width: 768px) and (min-width: 400px ) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        background: rgb(12,165,165);
+        background: linear-gradient(90deg, rgba(12,165,165,1) 0%, rgba(5,93,176,1) 50%, rgba(12,165,165,1) 100%); 
+    }
+    
+    .texto-header{
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        width: 50%;
+    }
+    
+    .icone-login{
+        width: 100%;
+    }
+
+    .cor-texto{
+    font-size: 1.6rem;
+    }
+
+    .saldo{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .container-saldo{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+    }
+
+    .imagem-astronauta{
+        margin: 0 auto;
+        width: 70%;
+    }
+    .texto-centralizado{
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    footer{
+        width: 100%;
+        display: block;
+    }
+    .treno{
+        width: 60%;
+    }
+    .footer-natal{
+        width: 100%;
+    }
+    .cor-footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+    

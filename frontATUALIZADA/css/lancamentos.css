@@ -1,8 +1,35 @@
+.saldo-saldo{
+    max-width: 100%;
+    margin: 0;
+}
+
+.main-form{
+    margin: 2rem auto;
+    padding: 0 14.0rem;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 div.input {
-    margin-bottom: 24px;
-    margin-top: 15px;
+    margin-bottom: 2.0rem;
+    margin-top: 1.5rem;
     position: relative;
     border: none;
+}
+
+.container-desc{
+    width: 100%;
 }
 
 #valor,
@@ -15,14 +42,10 @@ div.input {
     padding: 5px;
 }
 
-.container-desc {
-    margin-top: 15px;
-}
-
 #desc {
     border: none;
     height: 80px;
-    width: 500px;
+    width: 100%;
     border-radius: 5px;
     padding: 5px;
 }
@@ -31,11 +54,11 @@ input {
     background: rgba(245, 245, 245, 0.9);
 }
 
-.valor,
-.data { 
+.valor-texto,
+.data-data { 
     position: absolute;
     top: 0px;
-    left: 35px;
+    left: 2.4rem;
     color: black;
     transition: .4s;
 }
@@ -51,30 +74,84 @@ input {
 input:focus~label,
 input:valid~label {
     transform: translateY(-24px);
-    font-size: 13px;
+    font-size: 1rem;
     font-weight: bold;
     letter-spacing: 0.1em;
 }
 
 .entrada {
-    margin: 0 20px;
+    margin: 0 3.0rem;
 }
 
 .saida {
-    margin: 0 20px;
+    margin: 0 2.0rem;
 }
 
 input::placeholder {
     padding-left: 5px;
 }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 768px) and (min-width: 400px ) {
     .responsividade {
         flex-direction: column;
-        align-items: center;
     }
+    div.input{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .saldo-saldo{
+        max-width: 100%;
+        margin: 0;
+    }
+    .main-form{
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 1rem;
+        width: 100%;
+    }
+
     #valor,
     #data {
-        width: 500px;
+    margin: 0 auto;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    }
+    .valor-texto,
+    .data-data { 
+    left: 0.5rem;
+}
+
+
+    #desc{
+        width: 100%;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .container-desc{
+        align-items: center;
+        width: 80%;
+    }
+    footer{
+        width: 100%;
+        display: block;
+    }
+    .treno{
+        width: 60%;
+    }
+    .footer-natal{
+        width: 100%;
+    }
+    .cor-footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
