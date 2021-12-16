@@ -22,7 +22,6 @@
 
     <body>
         <header>
-            <div class="d-flex bd-highlight mb-3">
                 <div class="p-2 bd-highlight">
                     <img class="icone-login" src="assets/neon_site_ep1A+1.png" alt="Desenho de uma menina abraçando uma moeda">
                 </div>
@@ -35,20 +34,19 @@
                 </div>
                 <div class="p-2 bd-highlight login">
                     <a href="#">
-                        <img class="icone-login align-self-end" src="assets/neon_site_ep2-min.png" alt="Ícone de um boneco">
+                        <img class="icone-login" src="assets/neon_site_ep2-min.png" alt="Ícone de um boneco">
                     </a>
                 </div>
-            </div>
         </header>
 
-        <section class="saldo">
-            <div class="d-flex flex-column align-items-center container-saldo">
+        <main class="main-form">
+
+        <section class="container-saldo saldo saldo-saldo flex-column">
                 <h5>Saldo em Conta</h5>
                 <p id="dinheiro">R$&nbsp;0,00</p>
-            </div>
         </section>
-
         <form action="">
+        
             <div class="input d-flex justify-content-center">
                 <label class="entrada" for="radio-entrada"><input type="radio" name="opcao" id="radio-entrada" required> Entrada de Dinheiro</label>
                 <label class="saida" for="radio-saida"><input type="radio" name="opcao" id="radio-saida" onclick="radioBox()" required> Saída de Dinheiro</label>
@@ -57,17 +55,17 @@
             <div class="d-flex justify-content-center align-items-center responsividade">
                 <div class="input">
                     <input id="valor" required placeholder="15.50" type="text" min="0" onkeyup="formatarEntrada()">
-                    <label class="valor" for="valor">Valor</label>
+                    <label class="valor-texto" for="valor">Valor</label>
                     <span class="error"></span>
                 </div>
                 <div class="input">
                     <input id="data" required placeholder="15/08/2021" type="date"/>
-                    <label class="data" for="data">Data</label>
+                    <label class="data-data" for="data">Data</label>
                     <span class="error"></span>
                 </div>
             </div>
     
-            <div class="d-flex justify-content-center align-items-center container-desc">
+            <div class="container-desc justify-content-center">
                 <div class="input">
                     <input id="desc" required placeholder="Pagamento da Netflix" type="text" maxlength="50"/>
                     <label class="descricao" for="desc">Descrição</label>
@@ -77,6 +75,7 @@
     
             <button class="d-grid gap-2 mx-auto" type="submit" id="botao-cadastro">Cadastrar</button>
            </form>
+        </main>
 
         <footer class="footer-natal d-flex flex-column justify-content-center">
             <img class="treno" alt="silhueta de um trenó de natal sendo puxado por renas" src="assets/pngwing.com2.png">

@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
+require('dotenv').config()
 const porta = 3000
 
 app.use(express.json())
@@ -21,10 +22,13 @@ app.use(
 )
 
 //conectando o index ao banco de dados usando o código a baixo
-const mongoUri =
-  'mongodb+srv://Time05:%40qEmd9Ntf!cKt.A@apicluster.klywl.mongodb.net/bancodaapi?retryWrites=true&w=majority'
+const DB_USER = process.env.DB_USER
+const DB_PASSWORD = encodeURIComponent(process.env.DB_PASSWORD)
+
 mongoose
-  .connect(mongoUri)
+  .connect(
+    `mongodb+srv://${DB_USER}:${DB_PASSWORD}@apicluster.klywl.mongodb.net/bancodaapi?retryWrites=true&w=majority`
+  )
   .then(function () {
     console.log(`Conectado ao banco de dados`)
 
@@ -36,5 +40,5 @@ mongoose
     console.log(`Falha ao conectar-se:${erro}`)
   })
 
-const path = require("path");
-app.use("/",express.static(path.join(__dirname, "../frontATUALIZADA")));
+const path = require('path')
+app.use('/', express.static(path.join(__dirname, '../frontATUALIZADA')))

@@ -12,6 +12,10 @@ table {
           border-radius: 5px;
 }
 
+tr{
+  text-align: center;
+}
+
 th {
   padding: 10px 10px;
   margin: 7 auto;
@@ -36,12 +40,26 @@ tr.itens td {
   border-bottom: 2px solid #ccc;
 }
 
-tr.itens td.entrada{
-  border-left: 20px solid rgb(2, 221, 2);
+.entrada{
+ border-left: 3px solid rgb(2, 221, 2);
+ color:  rgb(2, 177, 2);
+ font-weight: bold;
 }
 
-tr.itens td.saida{
-  border-left: 20px solid rgb(255, 56, 56);
+.green{
+  color:  rgb(2, 177, 2);
+ font-weight: bold;
+}
+
+.red{
+  color:  rgb(255, 56, 56);
+  font-weight: bold;
+}
+
+.saida{
+  color:  rgb(255, 56, 56);
+  font-weight: bold;
+  border-left: 3px solid rgb(255, 56, 56);
 }
 
 #lapis,
@@ -64,6 +82,15 @@ td:first-child + td + td +td {
 }
 
 @media (max-width: 768px) {
+  .saldo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .container-saldo{
+    width: 80%;
+  }
   .balance {
     width: 80%;
   }
@@ -73,5 +100,20 @@ td:first-child + td + td +td {
   }
   td {
     font-size: 14px;
+  }
+  footer{
+    width: 100%;
+    display: block;
+}
+  .treno{
+    width: 60%;
+  }
+  .footer-natal{
+    width: 100%;
+  }
+  .cor-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
