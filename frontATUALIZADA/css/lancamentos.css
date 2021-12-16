@@ -11,6 +11,15 @@ form{
     align-items: center;
 }
 
+.container-informa-lancamento {
+    background: #EDEBD7;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 25px;
+    padding: 24px 0px;
+}
+
 div.input {
     margin-bottom: 2.0rem;
     margin-top: 1.5rem;
@@ -42,6 +51,15 @@ div.input {
 
 input {
     background: rgba(245, 245, 245, 0.9);
+}
+
+.texto-lancamento {
+    font-size: 15px;
+    text-align: center;
+}
+
+.texto-explicativo-lancamento {
+    margin: 5px !important;
 }
 
 .valor-texto,
@@ -85,6 +103,7 @@ input::placeholder {
     .responsividade {
         flex-direction: column;
     }
+
     div.input{
         flex-direction: column;
         justify-content: center;
