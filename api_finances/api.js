@@ -10,7 +10,7 @@ const Person = require('./models/people')
 
 const Transacao = require('./models/lancamentos')
 
-const rotas = require('./Rotas/rotas')
+const rotas = require('./rotas/rotas')
 rotas(app)
 
 // forma de ler JSON / middlewares
