@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 require('dotenv').config()
-const porta = 3000
+const porta = process.env.porta
 
 app.use(express.json())
 
