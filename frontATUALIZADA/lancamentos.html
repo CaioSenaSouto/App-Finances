@@ -17,6 +17,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;700&display=swap" rel="stylesheet">
 
         <script src="js/lancamentos.js" defer></script> 
+        <script src="js/script.js" defer></script> 
     </head>
 
     <body>
@@ -24,9 +25,12 @@
                 <div class="p-2 bd-highlight">
                     <img class="icone-login" src="assets/neon_site_ep1A+1.png" alt="Desenho de uma menina abraçando uma moeda">
                 </div>
-                <div class="texto-header">
-                    <h5 class="p-2 bd-highlight cor-texto">Meus Lançamentos</h5>
-                    <h5 class="p-2 bd-highlight login cor-texto">nome_usuario</h5>
+                <div class="p-2 bd-highlight align-self-end cor-texto">
+                    <h2>Meus Lançamentos</h2>
+                </div>
+                
+                <div class="ms-auto p-2 bd-highlight login">
+                    <h5 id="usuario" class="cor-texto">nome_usuario</h5>
                 </div>
                 <div class="p-2 bd-highlight login">
                     <a href="#">
@@ -69,14 +73,9 @@
                 </div>
             </div>
     
-            <!-- <button class="d-grid gap-2 mx-auto" id="botao-cadastro" type="submit"><a href="./tabela.html">Cadastrar</a></button> -->
-
             <button class="d-grid gap-2 mx-auto" type="submit" id="botao-cadastro">Cadastrar</button>
            </form>
         </main>
-
-           <!-- <button class="d-grid gap-2 mx-auto" id="botao-cadastro" type="submit"><a href="./tabela.html">Cadastrar</a></button> -->
-
 
         <footer class="footer-natal d-flex flex-column justify-content-center">
             <img class="treno" alt="silhueta de um trenó de natal sendo puxado por renas" src="assets/pngwing.com2.png">
