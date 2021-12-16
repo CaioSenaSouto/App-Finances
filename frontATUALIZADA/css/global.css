@@ -26,14 +26,15 @@ header {
 }
 
 .texto-header{
-    display: flex;
     justify-content: space-between;
     width: 85%;
+    align-items: end;
 }
 
-/* .login {
-    align-self: flex-end;
-} */
+.edicao-texto-navbar {
+    margin-top: 20px;
+    font-weight: 450;
+}
 
 .icone-login{
     height: 80px;
@@ -41,8 +42,12 @@ header {
 }
 
 .cor-texto {
-    font-size: 2rem;
     color: white;
+}
+
+.texto-header 
+h5 {
+    font-size: 2rem;
 }
 
 .container-saldo {
@@ -50,8 +55,9 @@ header {
     border-radius: 5px;
     width: 100%;
     max-width: 500px;
-    margin: 50px auto;
-    padding: 32px 64px;
+    margin-top: 70px;
+    margin-bottom: 25px;
+    padding: 40px 64px;
 }
 
 .saldo{

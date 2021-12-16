@@ -22,29 +22,35 @@
 
     <body>
         <header>
+            <div class="d-flex bd-highlight mb-3">
                 <div class="p-2 bd-highlight">
                     <img class="icone-login" src="assets/neon_site_ep1A+1.png" alt="Desenho de uma menina abraçando uma moeda">
                 </div>
-                <div class="p-2 bd-highlight align-self-end cor-texto">
-                    <h2>Meus Lançamentos</h2>
-                </div>
-                
-                <div class="ms-auto p-2 bd-highlight login">
-                    <h5 id="usuario" class="cor-texto">nome_usuario</h5>
-                </div>
-                <div class="p-2 bd-highlight login">
-                    <a href="#">
-                        <img class="icone-login" src="assets/neon_site_ep2-min.png" alt="Ícone de um boneco">
-                    </a>
-                </div>
+            </div>
+            <div class="texto-header d-flex">
+                <h5 class="p-2 bd-highlight cor-texto edicao-texto-navbar">Meus Lançamentos</h5>
+                <h4 class="p-2 bd-highlight login cor-texto edicao-texto-navbar">nome_usuario</h4>
+            </div>
+            <div class="p-2 bd-highlight login">
+                <a href="#">
+                    <img class="icone-login" src="assets/neon_site_ep2-min.png" alt="Ícone de um boneco">
+                </a>
+            </div>
         </header>
 
-        <main class="main-form">
+        <main>
 
+        <section class="saldo">
+            <div class="d-flex flex-column align-items-center container-saldo">
+                <h5>Saldo em Conta</h5>
+                <p id="dinheiro">R$&nbsp;0,00</p>
+            </div>
+        </section>
+<!-- 
         <section class="container-saldo saldo saldo-saldo flex-column">
                 <h5>Saldo em Conta</h5>
                 <p id="dinheiro">R$&nbsp;0,00</p>
-        </section>
+        </section> -->
         <form action="">
         
             <div class="input d-flex justify-content-center">
@@ -65,7 +71,7 @@
                 </div>
             </div>
     
-            <div class="container-desc justify-content-center">
+            <div class="container-desc justify-content-center d-flex">
                 <div class="input">
                     <input id="desc" required placeholder="Pagamento da Netflix" type="text" maxlength="50"/>
                     <label class="descricao" for="desc">Descrição</label>
@@ -79,7 +85,7 @@
 
         <footer class="footer-natal d-flex flex-column justify-content-center">
             <img class="treno" alt="silhueta de um trenó de natal sendo puxado por renas" src="assets/pngwing.com2.png">
-            <p class="cor-texto copyright align-self-center"> &copy; App-Finances</p>
+            <p class="cor-texto align-self-center"> &copy; App-Finances</p>
         </footer>
     </body>
 </html>

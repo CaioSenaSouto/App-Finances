@@ -3,16 +3,6 @@
     margin: 0;
 }
 
-.main-form{
-    margin: 2rem auto;
-    padding: 0 14.0rem;
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 form{
     width: 100%;
     display: flex;
@@ -45,7 +35,7 @@ div.input {
 #desc {
     border: none;
     height: 80px;
-    width: 100%;
+    width: 500px;
     border-radius: 5px;
     padding: 5px;
 }
@@ -119,11 +109,11 @@ input::placeholder {
     width: 100%;
     border-radius: 5px;
     }
+
     .valor-texto,
     .data-data { 
     left: 0.5rem;
-}
-
+    }
 
     #desc{
         width: 100%;
