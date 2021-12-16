@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 require('dotenv').config()
-const porta = process.env.porta
+const porta = process.env.PORTA
 
 app.use(express.json())
 
@@ -32,7 +32,7 @@ mongoose
   .then(function () {
     console.log(`Conectado ao banco de dados`)
 
-    app.listen(porta, function () {
+    app.listen(porta || 3000, function () {
       console.log(`rodando app na url http://localhost:${porta}/lancamentos`)
     })
   })
