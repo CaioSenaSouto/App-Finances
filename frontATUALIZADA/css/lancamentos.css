@@ -11,13 +11,20 @@ form{
     align-items: center;
 }
 
+.responsividade {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
 .container-informa-lancamento {
     background: #EDEBD7;
     border-radius: 5px;
     width: 100%;
     max-width: 500px;
     margin-bottom: 25px;
-    padding: 24px 0px;
+    padding: 2.4rem;
 }
 
 div.input {
@@ -99,23 +106,33 @@ input::placeholder {
     padding-left: 5px;
 }
 
-@media screen and (max-width: 768px) and (min-width: 400px ) {
+@media (max-width: 1280px) and (min-width:1024px) {
     .responsividade {
-        flex-direction: column;
+        width: 50%;
+        display: flex;
+        padding-left: 0 auto;
+        align-items: center;
+        flex-direction: row;
     }
 
     div.input{
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
-        width: 100%;
+        width: 63%;
     }
     .saldo-saldo{
         max-width: 100%;
         margin: 0;
     }
+    .container-informa-lancamento {
+        background: #EDEBD7;
+        border-radius: 5px;
+        width: 80%;
+        margin-bottom: 25px;
+        padding: 2rem;
+    }
     .main-form{
-        flex-direction: column;
         margin: 0 auto;
         padding: 1rem;
         width: 100%;
@@ -123,15 +140,95 @@ input::placeholder {
 
     #valor,
     #data {
+    align-items: center;
     margin: 0 auto;
     border: none;
-    width: 100%;
+    width: 98%;
     border-radius: 5px;
     }
 
     .valor-texto,
     .data-data { 
     left: 0.5rem;
+    width: 50%;
+    }
+
+    #desc{
+        width: 98%;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .container-desc{
+        align-items: center;
+        width: 80%;
+    }
+    footer{
+        width: 100%;
+        display: block;
+    }
+    .treno{
+        width: 40%;
+    }
+    .footer-natal{
+        width: 100%;
+    }
+    .cor-footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+} 
+
+@media screen and (max-width: 768px) and (min-width: 400px ) {
+    .responsividade {
+        width: 65%;
+        display: flex;
+        padding-left: 0 auto;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    div.input{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+    }
+    .saldo-saldo{
+        max-width: 100%;
+        margin: 0;
+    }
+    .container-informa-lancamento {
+        background: #EDEBD7;
+        border-radius: 5px;
+        width: 80%;
+        margin-bottom: 25px;
+        padding: 2rem;
+    }
+    .main-form{
+        margin: 0 auto;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    #valor,
+    #data {
+    align-items: center;
+    margin: 0 auto;
+    border: none;
+    width: 98%;
+    border-radius: 5px;
+    }
+
+    .valor-texto,
+    .data-data { 
+    left: 0.5rem;
+    width: 40%;
     }
 
     #desc{
@@ -141,7 +238,7 @@ input::placeholder {
     form{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
     }
     .container-desc{
@@ -154,6 +251,84 @@ input::placeholder {
     }
     .treno{
         width: 60%;
+    }
+    .footer-natal{
+        width: 100%;
+    }
+    .cor-footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) and (min-width: 320px ) {
+    .responsividade {
+        width: 100%;
+        display: flex;
+        padding-left: 0 auto;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    div.input{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+    }
+    .saldo-saldo{
+        max-width: 100%;
+        margin: 0;
+    }
+    .container-informa-lancamento {
+        background: #EDEBD7;
+        border-radius: 5px;
+        width: 80%;
+        margin-bottom: 25px;
+        padding: 2rem;
+    }
+    .main-form{
+        margin: 0 auto;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    #valor,
+    #data {
+    align-items: center;
+    margin: 0 auto;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    }
+
+    .valor-texto,
+    .data-data { 
+    left: 0.5rem;
+    width: 40%;
+    }
+
+    #desc{
+        width: 100%;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .container-desc{
+        align-items: center;
+        width: 100%;
+    }
+    footer{
+        width: 100%;
+        display: block;
+    }
+    .treno{
+        width: 80%;
     }
     .footer-natal{
         width: 100%;
