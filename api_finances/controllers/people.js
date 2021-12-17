@@ -52,7 +52,7 @@ exports.atualizar = (req, res) => {
 
 //Código delete para deletar
 exports.apagar = (req, res) => {
-    Pessoa.deleteOne({ _id: req.params.id }, function (erro, deletado) {
+    Pessoa.deleteOne({" _id": req.params.id }, function (erro, deletado) {
         if (erro) {
             res.status(400).send({ erro: 'Cliente não encontrado' })
         } else {

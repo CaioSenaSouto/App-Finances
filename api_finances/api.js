@@ -1,16 +1,18 @@
+const cors = require('cors')
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 require('dotenv').config()
-const porta = 3000
+const porta = process.env.PORT || 3000
 
+app.use(cors())
 app.use(express.json())
 
 const Person = require('./models/people')
 
 const Transacao = require('./models/lancamentos')
 
-const rotas = require('./Rotas/rotas')
+const rotas = require('./rotas/rotas')
 rotas(app)
 
 // forma de ler JSON / middlewares

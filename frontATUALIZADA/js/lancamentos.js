@@ -73,32 +73,18 @@ function radioBox() {
 }
 
 
-function formatarEntrada() {
-    let valor = document.getElementById("valor").value
-    // let valorEntrada = valor.value
-    // console.log(valorEntrada)
-    var formatter = new Intl.NumberFormat('pt-BR', {
-        style: 'currency',
-        currency: 'BRL',
-      
-        // These options are needed to round to whole numbers if that's what you want.
-        //minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
-        //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
-      });
-    //   console.log(formatter.format(2500)); /* $2,500.00 */
-    valor = formatter.format(valor)
-    valor = valor
-    console.log(valor)
-    // (valorEntrada).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
-}
+// function formatarEntrada() {
+//     let valor = document.getElementById("valor").value
+//     var formatter = new Intl.NumberFormat('pt-BR', {
+//         style: 'currency',
+//         currency: 'BRL'
+//       });
+//     //   console.log(formatter.format(2500)); /* $2,500.00 */
+//     valor = formatter.format(valor)
+//     console.log(valor)
+// }
 
-const usuarioLogado = (id) => {
-    fetch(`http://localhost:3000/people/${id}`)
-    .then(x => x.text())
-    .then(JSON.parse)
-    .then(data => {
-        document.getElementById("usuario").innerText = data.pessoa.nome
-    })
-}
-
+<<<<<<< HEAD
 usuarioLogado("61b9fd3c0870d00cc83a7dfa")
+=======
+>>>>>>> main
