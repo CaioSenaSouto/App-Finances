@@ -82,7 +82,7 @@ td:first-child + td + td +td {
   width: 100px 
 }
 
-@media (max-width: 768px) {
+@media  (max-width: 1280px) and (min-width:1024px){
   .saldo{
     display: flex;
     align-items: center;
@@ -97,17 +97,99 @@ td:first-child + td + td +td {
   }
 
   table {
-    width: 80%;
+    width: 50%;
   }
   td {
     font-size: 14px;
   }
+
+  footer{
+        width: 100%;
+        display: block;
+  }
+  .treno{
+        width: 40%;
+    }
+  .footer-natal{
+        width: 100%;
+    }
+  .cor-footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+  }
+}
+
+@media (max-width: 768px) and (min-width:400px) {
+  .saldo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .container-saldo{
+    width: 80%;
+  }
+  .balance {
+    width: 80%;
+  }
+
+  table {
+    width: 65%;
+    margin-bottom: 8.9rem;
+  }
+  td {
+    font-size: 16px;
+  }
+   footer{
+        width: 100%;
+        display: block;
+  }
+  .treno{
+        width: 60%;
+  }
+    .footer-natal{
+        width: 100%;
+  }
+  .cor-footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+   }
+}
+
+@media screen and (max-width: 480px) and (min-width: 320px ) {
+  .saldo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .container-saldo{
+    width: 80%;
+  }
+  .balance {
+    width: 80%;
+  }
+
+  table {
+    font-size: 13px;
+    width: 85%;
+  }
+  td {
+    font-weight: bold;
+    font-size: 0.6rem;
+  }
+  td.info-data{
+    font-size: 0.6rem;
+    padding: 1rem;
+  }
   footer{
     width: 100%;
     display: block;
-}
+  }
   .treno{
-    width: 60%;
+    width: 80%;
   }
   .footer-natal{
     width: 100%;

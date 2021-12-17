@@ -43,11 +43,14 @@ header {
 
 .cor-texto {
     color: white;
+    font-weight: bold;
+    font-size: 1.7rem;
 }
 
 .texto-header 
 h5 {
     font-size: 2rem;
+    font-weight: bold;
 }
 
 .container-saldo {
@@ -66,6 +69,7 @@ h5 {
     align-items: center;
     justify-content: center;
     width: 100%;
+    font-weight: bold;
 }
 
 p,
@@ -104,7 +108,8 @@ button a {
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    text-align: center
+    text-align: center;
+    font-weight: bold;
 }
 
 footer {
@@ -116,7 +121,7 @@ footer {
 }
 
 .copyright {
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 .treno {
@@ -124,7 +129,76 @@ footer {
     overflow: hidden;
 }
 
-@media screen and (max-width: 768px) and (min-width: 400px ) {
+@media  (max-width: 1280px) and (min-width:1024px){
+    header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        background: rgb(12,165,165);
+        background: linear-gradient(90deg, rgba(12,165,165,1) 0%, rgba(5,93,176,1) 50%, rgba(12,165,165,1) 100%); 
+    }
+    
+    .texto-header{
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .icone-login{
+        width: 100%;
+    }
+
+    .cor-texto{
+    font-weight: bold;
+    font-size: 2.6rem;
+    }
+
+    .saldo{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        font-weight: bold;
+    }
+    .container-saldo{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+    }
+
+    .imagem-astronauta{
+        margin: 0 auto;
+        width: 40%;
+    }
+    .texto-centralizado{
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    footer{
+        width: 100%;
+        display: block;
+    }
+    .treno{
+        width: 40%;
+    }
+    .footer-natal{
+        width: 100%;
+    }
+    .cor-footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 480px ) {
     header {
         display: flex;
         justify-content: space-between;
@@ -141,6 +215,12 @@ footer {
         text-align: center;
         width: 50%;
     }
+
+     .texto-header 
+    h5 {
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
     
     .icone-login{
         width: 100%;
@@ -148,6 +228,7 @@ footer {
 
     .cor-texto{
     font-size: 1.6rem;
+    font-weight: bold;
     }
 
     .saldo{
@@ -156,6 +237,8 @@ footer {
         align-items: center;
         justify-content: center;
         width: 100%;
+        font-size: 1rem;
+        font-weight: bold;
     }
     .container-saldo{
         text-align: center;
@@ -167,12 +250,13 @@ footer {
 
     .imagem-astronauta{
         margin: 0 auto;
-        width: 70%;
+        width: 50%;
     }
     .texto-centralizado{
         margin: 0 auto;
         text-align: center;
         font-size: 1.5rem;
+        font-weight: bold;
     }
     footer{
         width: 100%;
@@ -190,4 +274,81 @@ footer {
         justify-content: center;
     }
 }
+
+@media screen and (max-width: 480px) and (min-width: 320px ) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        background: rgb(12,165,165);
+        background: linear-gradient(90deg, rgba(12,165,165,1) 0%, rgba(5,93,176,1) 50%, rgba(12,165,165,1) 100%); 
+    }
     
+    .texto-header{
+        flex-direction: column;
+        display: flex;
+        font-size: 1rem;
+        align-items: center;
+        text-align: center;
+        width: 50%;
+    }
+
+    
+     .texto-header 
+    h5 {
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+    
+    .icone-login{
+        width: 100%;
+    }
+
+    .cor-texto{
+    font-weight: bold;
+    font-size: 0.6rem;
+    }
+
+    .saldo{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        font-weight: bold;
+    }
+    .container-saldo{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+    }
+
+    .imagem-astronauta{
+        margin: 0 auto;
+        width: 100%;
+    }
+    .texto-centralizado{
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    footer{
+        width: 100%;
+        display: block;
+    }
+    .treno{
+        width: 100%;
+    }
+    .footer-natal{
+        width: 100%;
+    }
+    .cor-footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
