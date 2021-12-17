@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const Transacao = mongoose.model('lancamento');
 
 
-//tentar usar email do path
 // código  post de lancamento do transacao
 exports.novoLancamento = (req, res) => {
     let transacao = new Transacao(req.body)

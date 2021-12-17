@@ -22,8 +22,8 @@ app.use(
 )
 
 //conectando o index ao banco de dados usando o código a baixo
-const DB_USER = process.env.DB_USER
-const DB_PASSWORD = encodeURIComponent(process.env.DB_PASSWORD)
+const DB_USER = 'Time05'
+const DB_PASSWORD = encodeURIComponent("@qEmd9Ntf!cKt.A")
 
 mongoose
   .connect(
@@ -39,6 +39,8 @@ mongoose
   .catch(function (erro) {
     console.log(`Falha ao conectar-se:${erro}`)
   })
+
+
 
 const path = require('path')
 app.use('/', express.static(path.join(__dirname, '../frontATUALIZADA')))

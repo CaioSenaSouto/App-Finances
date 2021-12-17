@@ -1,3 +1,5 @@
+import { novoLancamento } from '../../api_finances/controllers/lancamentos';
+
 //function validação de campos
 const campos = document.querySelectorAll("[required]");
 
