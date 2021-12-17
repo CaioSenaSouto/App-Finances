@@ -84,7 +84,4 @@ function radioBox() {
 //     console.log(valor)
 // }
 
-<<<<<<< HEAD
 usuarioLogado("61b9fd3c0870d00cc83a7dfa")
-=======
->>>>>>> main
