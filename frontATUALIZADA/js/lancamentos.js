@@ -104,9 +104,8 @@ function radioBox() {
 //     console.log(valor)
 // }
 
-<<<<<<< HEAD
 usuarioLogado("61b9fd3c0870d00cc83a7dfa")
-=======
+
 
 
 const usuarioLogado = (id) => {
@@ -130,4 +129,3 @@ const usuarioInfo = (id) => {
 
 usuarioLogado("61b9fd250870d00cc83a7df8")
 usuarioInfo("61b9fd250870d00cc83a7df8")
->>>>>>> main

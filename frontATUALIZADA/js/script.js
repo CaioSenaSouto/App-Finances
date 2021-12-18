@@ -7,6 +7,8 @@
 //     })
 // }
 
+// const { response } = require("express")
+
 // const idCaio = "61b9fd3c0870d00cc83a7dfa"
 // const idMarta = "61b9fd0e0870d00cc83a7df6"
 // const idPam = "61b9fd500870d00cc83a7dfc"
@@ -19,20 +21,27 @@
 
 // alterar para receber array de lançamentos do usuário
 const telaInicio = (email) => {
-    fetch(`http://localhost:3000/people/email/transaction/${email}`)
-        .then(x => x.text())
-        .then(JSON.parse)
+    fetch(`/people/email/transaction/${email}`)
+        .then(response => {
+        if(response.ok) {
+            return response.json();
+        }
+        })
         .then(dado => {
-            let usuarioLancamentos = document.querySelector(".com-lancamentos")
-            let usuarioSemLancamentos = document.querySelector(".sem-lancamentos")
-
-            if (dado.transacao.length <= 0) {
-                usuarioLancamentos.style.display = "none"
-                usuarioSemLancamentos.style.display = "inline"
-            } else {
-                usuarioSemLancamentos.style.display = "none"
-                usuarioLancamentos.style.display = "inline"
+            if(dado) {
+                console.log(">>>" + dado);
+                let usuarioLancamentos = document.querySelector(".com-lancamentos")
+                let usuarioSemLancamentos = document.querySelector(".sem-lancamentos")
+    
+                if (dado.transacao.length <= 0) {
+                    usuarioLancamentos.style.display = "none"
+                    usuarioSemLancamentos.style.display = "inline"
+                } else {
+                    usuarioSemLancamentos.style.display = "none"
+                    usuarioLancamentos.style.display = "inline"
+                }
             }
+         
         })
 
 }
@@ -45,4 +54,4 @@ const emailGerman = "german@neon.com"
 const emailPam = "pamela@dosteclados.com"
 
 // telaInicio(emailGe)
-telaInicio(emailCaio)
+// telaInicio(emailCaio)

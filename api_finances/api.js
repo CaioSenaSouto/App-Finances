@@ -35,7 +35,7 @@ mongoose
     console.log(`Conectado ao banco de dados`)
 
     app.listen(porta, function () {
-      console.log(`rodando app na url http://localhost:${porta}/lancamentos`)
+      console.log(`rodando app na url http://localhost:${porta}/people`)
     })
   })
   .catch(function (erro) {
