@@ -10,7 +10,6 @@ function validacao(e) {
         for (let erro in campo.validity) {
             if (erro != "customError" && campo.validity[erro] && erro != "valid") {
                 erroEncontrado = erro;
-                break
             }
         }
         return erroEncontrado;
@@ -39,70 +38,45 @@ for (let campo of campos) {
 document.querySelector("form").addEventListener("submit", e => {
     e.preventDefault()
 
-    let url = 'http://localhost:3000/people/:email/transaction'
-    let valor = document.getElementById('valor').value
-    let data = document.getElementById('data').value
-    let descricao = document.getElementById('desc').value
-    let email = usuario.email
+    // let url = 'http://localhost:3000/people/:email/transaction'
+    // let valor = document.getElementById('valor').value
+    // let data = document.getElementById('data').value
+    // let descricao = document.getElementById('desc').value
+    // let email = usuario.email
 
-    const file = { valor, data, descricao, email }
+    // const file = { valor, data, descricao, email }
 
-    var req = {
-        method: 'POST',
-        body: JSON.stringify(file),
-        headers: {
+    // var req = {
+    //     method: 'POST',
+    //     body: JSON.stringify(file),
+    //     headers: {
+    //         'Content-Type': 'application/json'
+    //     }
+    // };
+
+    // fetch(url, req)
+
+    async function lancaDados(email = "tailalima.ds@gmail.com") {
+        console.log("na function")
+        const valor = document.getElementById("valor").value
+        const data = document.getElementById("data").value
+        const descricao = document.getElementById("desc").value 
+    
+        const rawResponse = await fetch(`http://localhost:3000/people/${email}/transaction`, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
             'Content-Type': 'application/json'
-        }
+          },
+          body: JSON.stringify({email: `${email}`, valor: `${valor}`, data: `${data}`, descricao: `${descricao}`})
+        });
+        const content = await rawResponse.json();
     };
 
-    fetch(url, req)
+    lancaDados()
 
     location.href = './tabela.html'
 })
-
-
-// function casas decimais
-// function formatarEntrada() {
-//     var elemento = document.getElementById('valor');
-//     var valor = elemento.value;
-//     console.log(valor)
-//     // var valorFormatado = valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-
-//     valor = valor + '';
-//     valor = valor.replace(/[\D]+/g, '');
-//     valor = valor + '';
-//     valor = valor.replace(/([0-9]{2})$/g, ",$1");
-
-//     if (valor.length > 6) {
-//         valor = valor.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
-//     }
-
-//     elemento.value = valor;
-
-//     if(valor == 'NaN') elemento.value = ''
-// }
-
-function radioBox() {
-    const radioSaida = document.getElementById("radio-saida")
-
-    if (radioSaida.checked) {
-        console.log("saindo. acrescentar um negativo à esquerda")
-    }
-}
-
-
-// function formatarEntrada() {
-//     let valor = document.getElementById("valor").value
-//     var formatter = new Intl.NumberFormat('pt-BR', {
-//         style: 'currency',
-//         currency: 'BRL'
-//       });
-//     //   console.log(formatter.format(2500)); /* $2,500.00 */
-//     valor = formatter.format(valor)
-//     console.log(valor)
-// }
-
-
 
 const usuarioLogado = (id) => {
     fetch(`http://localhost:3000/people/${id}`)
@@ -122,6 +96,8 @@ const usuarioInfo = (id) => {
             consulta.porUsuario()
         })
 }
+
+
 
 usuarioLogado("61b9fd250870d00cc83a7df8")
 usuarioInfo("61b9fd250870d00cc83a7df8")
