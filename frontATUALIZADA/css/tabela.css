@@ -12,6 +12,10 @@ table {
           border-radius: 5px;
 }
 
+tbody a{
+  text-decoration: none;
+}
+
 tr{
   text-align: center;
 }
@@ -25,11 +29,12 @@ th {
 
 td {
   word-break: break-word;
-  font-size: 15px;
+  font-size: 1.0rem;
   background-color: rgba(245, 245, 245, 0.9);
   border: 1px solid #ccc;
-  padding: 5px 10px;
   line-height: 25px;
+  word-break: keep-all;
+  padding: 0.6rem 0.6rem;
 }
 
 tr {
@@ -44,7 +49,6 @@ tr.itens td {
 .entrada{
  border-left: 3px solid rgb(2, 221, 2);
  color:  rgb(2, 177, 2);
- font-weight: bold;
 }
 
 .green{
@@ -179,6 +183,7 @@ td:first-child + td + td +td {
   td {
     font-weight: bold;
     font-size: 0.6rem;
+    padding: 0.2rem;
   }
   td.info-data{
     font-size: 0.6rem;
