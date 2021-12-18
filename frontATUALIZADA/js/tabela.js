@@ -47,7 +47,7 @@ function carregaTransacoes() {
     match.forEach(transacao => {
         transactions.push({
             titulo: transacao.descricao,
-            custo: transacao.valor,
+            custo: (transacao.valor).toFixed(2),
             data: transacao.data,
             id: transacao._id
         })
