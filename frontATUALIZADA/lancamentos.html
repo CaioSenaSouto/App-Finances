@@ -14,8 +14,7 @@
     <link rel="stylesheet" href="css/lancamentos.css">
     <link rel="stylesheet" href="css/index.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,13 +28,12 @@
     <header>
         <div class="d-flex bd-highlight mb-3">
             <div class="p-2 bd-highlight">
-                <img class="icone-login" src="assets/neon_site_ep1A+1.png"
-                    alt="Desenho de uma menina abraçando uma moeda">
+                <img class="icone-login" src="assets/neon_site_ep1A+1.png" alt="Desenho de uma menina abraçando uma moeda">
             </div>
         </div>
         <div class="texto-header d-flex">
             <h5 class="p-2 bd-highlight cor-texto edicao-texto-navbar">Meus Lançamentos</h5>
-            <h4 class="p-2 bd-highlight login cor-texto edicao-texto-navbar">nome_usuario</h4>
+            <h4 class="p-2 bd-highlight login cor-texto edicao-texto-navbar" id="usuario">nome_usuario</h4>
         </div>
         <div class="p-2 bd-highlight login">
             <a href="#">
@@ -78,31 +76,20 @@
                 </div>
             </div>
 
-            <!-- <div class="input d-flex justify-content-center texto-explicativo-lancamento">
-                <h5 class="texto-lancamento">
-                    É só preencher os campos e clicar em cadastrar. <br>
-                </h5>
-            </div>
-
-            <div class="input d-flex justify-content-center texto-explicativo-lancamento">
-                <h5 class="texto-lancamento">
-                    Ah, se for uma saída de dinheiro, não esquece de colocar o sinal de negativo antes do valor :)
-                </h5>
-            </div> -->
 
             <div class=" responsividade">
                 <div class="input">
                     <input id="valor" required placeholder="15.50" type="text" maxlength="12">
-                    <label class="valor-texto" for="valor">Valor</label>                </div>
+                    <label class="valor-texto" for="valor">Valor</label> </div>
                 <div class="input">
-                    <input id="data" required placeholder="15/08/2021" type="date" />
-                    <label class="data-data" for="data">Data</label>                </div>
+                    <input id="data" required placeholder="15/08/2021" type="date" max="2199-12-31" />
+                    <label class="data-data" for="data">Data</label> </div>
             </div>
 
             <div class="container-desc justify-content-center d-flex">
                 <div class="input">
                     <input id="desc" required placeholder="Pagamento da Netflix" type="text" maxlength="50" />
-                    <label class="descricao" for="desc">Descrição</label>                </div>
+                    <label class="descricao" for="desc">Descrição</label> </div>
             </div>
             <button class="d-grid gap-2 mx-auto" type="submit" id="botao-cadastro">Cadastrar</button>
         </form>

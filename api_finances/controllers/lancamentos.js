@@ -6,7 +6,6 @@ const Transacao = mongoose.model('lancamento');
 // código  post de lancamento do transacao
 exports.novoLancamento = (req, res) => {
     let transacao = new Transacao(req.body)
-
     transacao.save((erro, transacao) => {
         if (erro) {
             res.status(400).send({ erro })
@@ -30,8 +29,8 @@ exports.busca = (req, res) => {
 
 
 //fazendo get por id
-exports.buscaId = (req, res) => {
-    Transacao.findOne({ '_id': req.params.id }, function (erro,transacao) {
+exports.buscaEmail = (req, res) => {
+    Transacao.findOne({ '_id': req.params.id }, function(erro, transacao) {
         if (erro) {
             res.status(404).send({ erro: 'Transação não encontrada' })
         } else {
@@ -43,7 +42,7 @@ exports.buscaId = (req, res) => {
 
 //Código update para atualizar dados da transação
 exports.atualizar = (req, res) => {
-    Transacao.findOneAndUpdate({ '_id': req.params.id }, req.body, { new: true }, function (erro, atualizado) {
+    Transacao.findOneAndUpdate({ '_id': req.params.id }, req.body, { new: true }, function(erro, atualizado) {
         if (erro) {
             res.status(400).send({ erro: 'Não atualizado' })
         } else {
@@ -55,7 +54,7 @@ exports.atualizar = (req, res) => {
 
 //Código delete para deletar
 exports.apagar = (req, res) => {
-    Transacao.deleteOne({ _id: req.params.id }, function (erro, deletado) {
+    Transacao.deleteOne({ _id: req.params.id }, function(erro, deletado) {
         if (erro) {
             res.status(400).send({ erro: 'Transacao não encontrada' })
         } else {
