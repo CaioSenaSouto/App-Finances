@@ -47,7 +47,7 @@ function carregaTransacoes() {
     match.forEach(transacao => {
         transactions.push({
             titulo: transacao.descricao,
-            custo: transacao.valor,
+            valor: (transacao.valor).toFixed(2),
             data: transacao.data,
             id: transacao._id
         })
@@ -83,31 +83,31 @@ const Transaction = {
 
     incomes() {
         let income = 0;
-
         Transaction.all.forEach(transaction => {
-            if (transaction.custo > 0) {
-                income += transaction.custo;
+            if (transaction.valor > 0) {
+                income += parseFloat(transaction.valor);
             }
         })
-        return income;
+        console.log(income.toFixed(2))
+        return income.toFixed(2);
     },
 
     expenses() {
 
         let expense = 0;
         Transaction.all.forEach(transaction => {
-            if (transaction.custo < 0) {
-                expense += transaction.custo;
+            if (transaction.valor < 0) {
+                expense += parseFloat(transaction.valor);
             }
         })
-
-        return expense;
+        console.log(expense.toFixed(2))
+        return expense.toFixed(2);
 
     },
 
     total() {
 
-        return Transaction.incomes() + Transaction.expenses();
+        return (Transaction.incomes() - Transaction.expenses()).toFixed(2);
     }
 };
 
@@ -115,7 +115,7 @@ const DOM = {
     transactionsContainer: document.querySelector('#table tbody'),
     addTransaction(transaction, index) {
         transaction.date = transaction.data.slice(0, 10)
-        transaction.custo = transaction.custo
+        transaction.valor = transaction.valor
         const tr = document.createElement('tr')
         tr.innerHTML = DOM.innerHTMLTransaction(transaction, index)
 
@@ -124,15 +124,16 @@ const DOM = {
     },
     innerHTMLTransaction(transaction, index) {
 
-        const CSSclass = transaction.custo > 0 ? "entrada" : "saida";
+        const CSSclass = transaction.valor > 0 ? "entrada" : "saida";
 
-        const CSSnumber = transaction.custo > 0 ? "green" : "red";
+        // const CSSnumber = transaction.custo > 0 ? "green" : "red";
+        const CSSnumber = transaction.valor > 0 ? "green" : "red";
 
-        const custo = Utils.formatCurrency(transaction.custo)
+        const valor = Utils.formatCurrency(transaction.valor)
 
         const html = `
             <td class="${CSSclass}" id="edit" onClick="return editar(event)" contenteditable="false" idBanco=${transaction.id}>${transaction.titulo}</td>
-            <td class="${CSSnumber}" "saida-valor" "entrada-valor"  id="edit" contenteditable="false">${custo}</td>
+            <td class="${CSSnumber}" "saida-valor" "entrada-valor"  id="edit" contenteditable="false">${valor}</td>
             <td class="info-data" contenteditable="false"  id="edit">${transaction.date}</td>
             <td>
                 <a id="editar" onClick="return editar(event);" href="./tabela.html">

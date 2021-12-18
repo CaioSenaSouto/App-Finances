@@ -47,7 +47,7 @@ tr.itens td {
 }
 
 .entrada{
- border-left: 3px solid rgb(2, 221, 2);
+ border-left: 15px solid rgb(2, 221, 2);
  color:  rgb(2, 177, 2);
 }
 
@@ -64,7 +64,7 @@ tr.itens td {
 .saida{
   color:  rgb(255, 56, 56);
   font-weight: bold;
-  border-left: 3px solid rgb(255, 56, 56);
+  border-left: 15px solid rgb(255, 56, 56);
 }
 
 #lapis,
