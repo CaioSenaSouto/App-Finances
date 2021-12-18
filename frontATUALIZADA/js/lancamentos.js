@@ -5,11 +5,12 @@ const campos = document.querySelectorAll("[required]");
 
 function validacao(e) {
     const campo = e.target
+
     function verificandoErro() {
         let erroEncontrado = false;
 
-        for(let erro in campo.validity) {
-            if (erro != "customError" && campo.validity[erro] && erro!= "valid") {
+        for (let erro in campo.validity) {
+            if (erro != "customError" && campo.validity[erro] && erro != "valid") {
                 erroEncontrado = erro;
                 break
             }
@@ -30,7 +31,7 @@ function validacao(e) {
 }
 
 for (let campo of campos) {
-    campo.addEventListener("invalid", event=> {
+    campo.addEventListener("invalid", event => {
         event.preventDefault
         validacao(event)
     })
@@ -38,8 +39,27 @@ for (let campo of campos) {
 }
 
 document.querySelector("form").addEventListener("submit", e => {
-    e.preventDefault() 
-    location.href = './tabela.html';
+    e.preventDefault()
+
+    let url = 'http://localhost:3000/people/:email/transaction'
+    let valor = document.getElementById('valor').value
+    let data = document.getElementById('data').value
+    let descricao = document.getElementById('desc').value
+    let email = usuario.email
+
+    const file = { valor, data, descricao, email }
+
+    var req = {
+        method: 'POST',
+        body: JSON.stringify(file),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    };
+
+    fetch(url, req)
+
+    location.href = './tabela.html'
 })
 
 
@@ -49,7 +69,7 @@ document.querySelector("form").addEventListener("submit", e => {
 //     var valor = elemento.value;
 //     console.log(valor)
 //     // var valorFormatado = valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-    
+
 //     valor = valor + '';
 //     valor = valor.replace(/[\D]+/g, '');
 //     valor = valor + '';
@@ -67,7 +87,7 @@ document.querySelector("form").addEventListener("submit", e => {
 function radioBox() {
     const radioSaida = document.getElementById("radio-saida")
 
-    if(radioSaida.checked) {
+    if (radioSaida.checked) {
         console.log("saindo. acrescentar um negativo à esquerda")
     }
 }
@@ -84,4 +104,30 @@ function radioBox() {
 //     console.log(valor)
 // }
 
+<<<<<<< HEAD
 usuarioLogado("61b9fd3c0870d00cc83a7dfa")
+=======
+
+
+const usuarioLogado = (id) => {
+    fetch(`http://localhost:3000/people/${id}`)
+        .then(x => x.text())
+        .then(JSON.parse)
+        .then(data => {
+            document.getElementById("usuario").innerText = data.pessoa.nome
+        })
+}
+
+const usuarioInfo = (id) => {
+    fetch(`http://localhost:3000/people/${id}`)
+        .then(x => x.text())
+        .then(JSON.parse)
+        .then(data => {
+            usuario = data.pessoa
+            consulta.porUsuario()
+        })
+}
+
+usuarioLogado("61b9fd250870d00cc83a7df8")
+usuarioInfo("61b9fd250870d00cc83a7df8")
+>>>>>>> main

@@ -1,71 +1,78 @@
 :root {
-    --primary-color: #fd951f;
-    --bg-color: #e2e2e2;
-    --text-color: white;
-    --nav-color: rgb(12, 165, 165);
+  --primary-color: #fd951f;
+  --bg-color: #e2e2e2;
+  --text-color: white;
+  --nav-color: rgb(12, 165, 165);
 }
 
 html {
-    font-family: 'Inter', sans-serif !important;
-    height: 100%;
+  font-family: 'Inter', sans-serif !important;
+  height: 100%;
 }
 
-
 body {
-    background-color: var(--bg-color) !important;
+  background-color: var(--bg-color) !important;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-    padding: 1.0rem;
-    background: rgb(12,165,165);
-    background: linear-gradient(90deg, rgba(12,165,165,1) 0%, rgba(5,93,176,1) 50%, rgba(12,165,165,1) 100%); 
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 1rem;
+  background: rgb(12, 165, 165);
+  background: linear-gradient(
+    90deg,
+    rgba(12, 165, 165, 1) 0%,
+    rgba(5, 93, 176, 1) 50%,
+    rgba(12, 165, 165, 1) 100%
+  );
 }
 
-.texto-header{
-    justify-content: space-between;
-    width: 85%;
-    align-items: end;
+.texto-header {
+  justify-content: space-between;
+  width: 85%;
+  align-items: end;
 }
 
 .edicao-texto-navbar {
-    margin-top: 20px;
-    font-weight: 450;
+  margin-top: 20px;
+  font-weight: 450;
 }
 
-.icone-login{
-    height: 80px;
-    justify-content: space-between;
+.icone-login {
+  height: 80px;
+  justify-content: space-between;
 }
 
 .cor-texto {
-    color: white;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
-.texto-header 
-h5 {
-    font-size: 2rem;
+.texto-header h5 {
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .container-saldo {
-    background: rgba(245, 245, 245, 0.9);
-    border-radius: 5px;
-    width: 100%;
-    max-width: 500px;
-    margin-top: 70px;
-    margin-bottom: 25px;
-    padding: 40px 64px;
+  background: rgba(245, 245, 245, 0.9);
+  border-radius: 5px;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 70px;
+  margin-bottom: 25px;
+  padding: 40px 64px;
 }
 
-.saldo{
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+.saldo {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-weight: bold;
 }
 
 p,
@@ -76,118 +83,292 @@ p,
 }
 
 button {
-    margin-top: 30px !important;
-    padding: 20px;
-    border: 2px solid rgb(255, 200, 0);
-    border-radius: 15px !important;
-    background-color: rgb(255, 200, 0);
-    font-weight: bold;
-    font-family: 'Inter', sans-serif !important;
+  margin-top: 30px !important;
+  padding: 20px;
+  border: 2px solid rgb(255, 200, 0);
+  border-radius: 15px !important;
+  background-color: rgb(255, 200, 0);
+  font-weight: bold;
+  font-family: 'Inter', sans-serif !important;
 }
 
 button:hover {
-    background-color: #e6b400!important;
-    font-size: 103%;
+  background-color: #e6b400 !important;
+  font-size: 103%;
 }
 
 button:active {
-    color: rgb(12,165,165);
-    border-color: rgb(12,165,165);
+  color: rgb(12, 165, 165);
+  border-color: rgb(12, 165, 165);
 }
 
 button a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 .texto-centralizado {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    text-align: center
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
 }
 
 footer {
-    margin-top: 40px;
-    height: 200px;
-    background: rgb(12,165,165);
-    background: linear-gradient(90deg, rgba(12,165,165,1) 0%, rgba(5,93,176,1) 50%, rgba(12,165,165,1) 100%);
-    padding: 10px 0;
+  margin-top: 40px;
+  height: 200px;
+  background: rgb(12, 165, 165);
+  background: linear-gradient(
+    90deg,
+    rgba(12, 165, 165, 1) 0%,
+    rgba(5, 93, 176, 1) 50%,
+    rgba(12, 165, 165, 1) 100%
+  );
+  padding: 10px 0;
 }
 
 .copyright {
-    font-size: 2rem;
+  font-size: 1rem;
 }
 
 .treno {
-    align-self: center;
-    overflow: hidden;
+  align-self: center;
+  overflow: hidden;
 }
 
-@media screen and (max-width: 768px) and (min-width: 400px ) {
-    header {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        align-items: center;
-        background: rgb(12,165,165);
-        background: linear-gradient(90deg, rgba(12,165,165,1) 0%, rgba(5,93,176,1) 50%, rgba(12,165,165,1) 100%); 
-    }
-    
-    .texto-header{
-        flex-direction: column;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        width: 50%;
-    }
-    
-    .icone-login{
-        width: 100%;
-    }
+@media (max-width: 1280px) and (min-width: 1024px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background: rgb(12, 165, 165);
+    background: linear-gradient(
+      90deg,
+      rgba(12, 165, 165, 1) 0%,
+      rgba(5, 93, 176, 1) 50%,
+      rgba(12, 165, 165, 1) 100%
+    );
+  }
 
-    .cor-texto{
+  .texto-header {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .icone-login {
+    width: 100%;
+  }
+
+  .cor-texto {
+    font-weight: bold;
+    font-size: 2.6rem;
+  }
+
+  .saldo {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-weight: bold;
+  }
+  .container-saldo {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+  }
+
+  .imagem-astronauta {
+    margin: 0 auto;
+    width: 40%;
+  }
+  .texto-centralizado {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  footer {
+    width: 100%;
+    display: block;
+  }
+  .treno {
+    width: 40%;
+  }
+  .footer-natal {
+    width: 100%;
+  }
+  .cor-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 480px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background: rgb(12, 165, 165);
+    background: linear-gradient(
+      90deg,
+      rgba(12, 165, 165, 1) 0%,
+      rgba(5, 93, 176, 1) 50%,
+      rgba(12, 165, 165, 1) 100%
+    );
+  }
+
+  .texto-header {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+  }
+
+  .texto-header h5 {
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+
+  .icone-login {
+    width: 100%;
+  }
+
+  .cor-texto {
     font-size: 1.6rem;
-    }
+    font-weight: bold;
+  }
 
-    .saldo{
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
-    .container-saldo{
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 80%;
-    }
+  .saldo {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .container-saldo {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+  }
 
-    .imagem-astronauta{
-        margin: 0 auto;
-        width: 70%;
-    }
-    .texto-centralizado{
-        margin: 0 auto;
-        text-align: center;
-        font-size: 1.5rem;
-    }
-    footer{
-        width: 100%;
-        display: block;
-    }
-    .treno{
-        width: 60%;
-    }
-    .footer-natal{
-        width: 100%;
-    }
-    .cor-footer{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  .imagem-astronauta {
+    margin: 0 auto;
+    width: 50%;
+  }
+  .texto-centralizado {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  footer {
+    width: 100%;
+    display: block;
+  }
+  .treno {
+    width: 60%;
+  }
+  .footer-natal {
+    width: 100%;
+  }
+  .cor-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
-    
+
+@media screen and (max-width: 480px) and (min-width: 320px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background: rgb(12, 165, 165);
+    background: linear-gradient(
+      90deg,
+      rgba(12, 165, 165, 1) 0%,
+      rgba(5, 93, 176, 1) 50%,
+      rgba(12, 165, 165, 1) 100%
+    );
+  }
+
+  .texto-header {
+    flex-direction: column;
+    display: flex;
+    font-size: 1rem;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+  }
+
+  .texto-header h5 {
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+
+  .icone-login {
+    width: 100%;
+  }
+
+  .cor-texto {
+    font-weight: bold;
+    font-size: 0.6rem;
+  }
+
+  .saldo {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-weight: bold;
+  }
+  .container-saldo {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+  }
+
+  .imagem-astronauta {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .texto-centralizado {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  footer {
+    width: 100%;
+    display: block;
+  }
+  .treno {
+    width: 100%;
+  }
+  .footer-natal {
+    width: 100%;
+  }
+  .cor-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
