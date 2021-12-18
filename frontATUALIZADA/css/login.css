@@ -1,0 +1,35 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 10rem auto;
+    width: 40%;
+    border-radius: 5px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 4rem auto;
+}
+
+label{
+    justify-content: left;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+input{
+    margin-bottom: 2rem;
+    padding: 1rem;
+    width: 400px;
+    height: 50px;
+}
+
+.botao {
+    align-items: center;
+    margin: 0 auto;
+    width: 45%;
+    font-size: 1.6rem;
+}
