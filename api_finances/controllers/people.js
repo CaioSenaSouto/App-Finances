@@ -34,7 +34,7 @@ exports.buscaId = (req, res) => {
         if (erro) {
             res.status(404).send({ erro: 'Dados não encontrado' })
         } else {
-            res.status(302).send({ pessoa })
+            res.status(200).send({ pessoa })
         }
     })
 }
