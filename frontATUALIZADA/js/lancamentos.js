@@ -57,8 +57,8 @@ document.querySelector("form").addEventListener("submit", e => {
     // fetch(url, req)
 
     async function lancaDados(email = "tailalima.ds@gmail.com") {
-        console.log("na function")
         const valor = document.getElementById("valor").value
+        const valorPonto = valor.replace(',', '.')
         const data = document.getElementById("data").value
         const descricao = document.getElementById("desc").value 
     
@@ -68,7 +68,7 @@ document.querySelector("form").addEventListener("submit", e => {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify({email: `${email}`, valor: `${valor}`, data: `${data}`, descricao: `${descricao}`})
+          body: JSON.stringify({email: `${email}`, valor: `${valorPonto}`, data: `${data}`, descricao: `${descricao}`})
         });
         const content = await rawResponse.json();
     };

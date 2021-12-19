@@ -88,7 +88,7 @@ const Transaction = {
                 income += parseFloat(transaction.valor);
             }
         })
-        console.log(income.toFixed(2))
+        console.log(income)
         return income.toFixed(2);
     },
 
@@ -100,14 +100,21 @@ const Transaction = {
                 expense += parseFloat(transaction.valor);
             }
         })
-        console.log(expense.toFixed(2))
+        console.log(expense)
         return expense.toFixed(2);
 
     },
 
     total() {
+        let saldo = parseFloat(Transaction.incomes()) + parseFloat(Transaction.expenses())
 
-        return (Transaction.incomes() - Transaction.expenses()).toFixed(2);
+        if (saldo > 0) {
+            document.getElementById("dinheiro").style.color = "green" 
+        } else {
+            console.log("negativo")
+            document.getElementById("dinheiro").style.color = "red"
+        }
+        return saldo.toFixed(2)
     }
 };
 
