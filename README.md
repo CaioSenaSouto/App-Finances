@@ -4,7 +4,7 @@
   
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/CaioSenaSouto/App-Finances/blob/main/LICENSE)  
   
-<img src="frontATUALIZADA/assets/Tech%20Talents.png" width="1300" height="2000">
+<img src="frontATUALIZADA/assets/Tech%20Talents.png" width="600">
   
 </div>
 
