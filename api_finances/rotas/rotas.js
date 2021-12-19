@@ -6,7 +6,7 @@ module.exports = function(app) {
     app.route('/people').post(peopleCrudes.novoCliente)
     app.route('/people').get(peopleCrudes.busca)
     app.route('/people/:id').get(peopleCrudes.buscaId)
-    app.route('/people/:email').get(peopleCrudes.buscaEmail)
+    app.route('/people/email/:email').get(peopleCrudes.buscaEmail)
     app.route('/people/:id').put(peopleCrudes.atualizar)
     app.route('/people/:id').delete(peopleCrudes.apagar)
     app.route('/people/:email/transaction').post(transactionCrudes.novoLancamento)
