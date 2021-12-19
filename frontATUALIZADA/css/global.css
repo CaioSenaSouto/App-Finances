@@ -165,7 +165,7 @@ footer {
 
   .cor-texto {
     font-weight: bold;
-    font-size: 2.6rem;
+    font-size: 1.6rem;
   }
 
   .saldo {
@@ -244,7 +244,7 @@ footer {
   }
 
   .cor-texto {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: bold;
   }
 
@@ -327,7 +327,7 @@ footer {
 
   .cor-texto {
     font-weight: bold;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
   }
 
   .saldo {
@@ -339,6 +339,7 @@ footer {
     font-weight: bold;
   }
   .container-saldo {
+    margin-top: 1rem;
     text-align: center;
     display: flex;
     align-items: center;
