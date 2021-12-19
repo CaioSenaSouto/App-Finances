@@ -28,9 +28,9 @@ exports.busca = (req, res) => {
 }
 
 
-//fazendo get por id
+//fazendo get por email
 exports.buscaEmail = (req, res) => {
-    Transacao.findOne({ '_id': req.params.id }, function(erro, transacao) {
+    Transacao.findOne({ 'email': req.params.email }, function(erro, transacao) {
         if (erro) {
             res.status(404).send({ erro: 'Transação não encontrada' })
         } else {

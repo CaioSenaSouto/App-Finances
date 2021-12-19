@@ -1,119 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="assets/D-neon_site_invest.png" />
-    <meta name="theme-color" content="#319197" />
 
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/tabela.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="assets/D-neon_site_invest.png" />
+  <meta name="theme-color" content="#319197" />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/tabela.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;700&display=swap"
-      rel="stylesheet"
-    />
-    <title>Meus Lançamentos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 
-    <script src="js/script.js" defer></script>
-  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;700&display=swap" rel="stylesheet" />
+  <title>Meus Lançamentos</title>
 
-  <body>
-    <header>
-      <div class="d-flex bd-highlight mb-3">
-        <div class="p-2 bd-highlight">
-          <img
-            class="icone-login"
-            src="assets/neon_site_ep1A+1.png"
-            alt="Desenho de uma menina abraçando uma moeda"
-          />
-        </div>
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="d-flex bd-highlight mb-3">
+      <div class="p-2 bd-highlight">
+        <img class="icone-login" src="assets/neon_site_ep1A+1.png" alt="Desenho de uma menina abraçando uma moeda" />
       </div>
-      <div class="texto-header d-flex">
-        <h5 class="p-2 bd-highlight cor-texto edicao-texto-navbar">
-          Meus Lançamentos
-        </h5>
-        <h4
-          class="p-2 bd-highlight login cor-texto edicao-texto-navbar"
-          id="usuario"
-        >
-          nome_usuario
-        </h4>
-      </div>
-      <div class="p-2 bd-highlight login">
-        <a href="#">
-          <img
-            class="icone-login"
-            src="assets/neon_site_ep2-min.png"
-            alt="Ícone de um boneco"
-          />
-        </a>
-      </div>
-    </header>
+    </div>
+    <div class="texto-header d-flex">
+      <h5 class="p-2 bd-highlight cor-texto edicao-texto-navbar">
+        Meus Lançamentos
+      </h5>
+      <h4 class="p-2 bd-highlight login cor-texto edicao-texto-navbar" id="usuario">
+        nome_usuario
+      </h4>
+    </div>
+    <div class="p-2 bd-highlight login">
+      <a href="#">
+        <img class="icone-login" src="assets/neon_site_ep2-min.png" alt="Ícone de um boneco" />
+      </a>
+    </div>
+  </header>
 
-    <section class="saldo">
-      <div class="d-flex flex-column align-items-center container-saldo">
-        <h5>Saldo em Conta</h5>
-        <p id="dinheiro">R$&nbsp;0,00</p>
-      </div>
-    </section>
+  <section class="saldo">
+    <div class="d-flex flex-column align-items-center container-saldo">
+      <h5>Saldo em Conta</h5>
+      <p id="dinheiro">R$&nbsp;0,00</p>
+    </div>
+  </section>
 
-    <table id="table">
+  <table id="table">
 
-        <thead>
-            <tr>
-                <th>Título</th>
-                <th>Custo</th>
-                <th>Data</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="itens">
-            </tr>
-        </tbody>
+    <thead>
+    </thead>
+    <tbody>
+    </tbody>
+    <tbody>
+    </tbody>
+  </table>
 
-      <thead>
-        <tr>
-          <th>Título</th>
-          <th>Custo</th>
-          <th>Data</th>
-          <th>Ações</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="itens">
-          <td class="info-titulo entrada"></td>
-          <td class="info-custo"></td>
-          <td class="info-data"></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
+  <button class="d-grid gap-2 mx-auto" type="submit">
+    <a href="lancamentos.html">+ Lançamento</a>
+  </button>
 
-    <button class="d-grid gap-2 mx-auto" type="submit">
-      <a href="lancamentos.html">+ Lançamento</a>
-    </button>
+  <footer class="footer-natal d-flex flex-column justify-content-center">
+    <img class="treno" alt="silhueta de um trenó de natal sendo puxado por renas" src="assets/pngwing.com2.png" />
+    <p class="cor-texto align-self-center">&copy; App-Finances</p>
+  </footer>
+  <script src="./js/tabela.js"></script>
+</body>
 
-    <footer class="footer-natal d-flex flex-column justify-content-center">
-      <img
-        class="treno"
-        alt="silhueta de um trenó de natal sendo puxado por renas"
-        src="assets/pngwing.com2.png"
-      />
-      <p class="cor-texto align-self-center">&copy; App-Finances</p>
-    </footer>
-    <script src="./js/tabela.js"></script>
-  </body>
 </html>
