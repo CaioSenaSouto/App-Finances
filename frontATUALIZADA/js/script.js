@@ -18,24 +18,24 @@
 // usuarioLogado(idCaio)
 
 // alterar para receber array de lançamentos do usuário
-// const telaInicio = (email) => {
-//     fetch(`/people/${email}/transaction/:id`)
-//         .then(x => x.text())
-//         .then(JSON.parse)
-//         .then(dado => {
-//             let usuarioLancamentos = document.querySelector(".com-lancamentos")
-//             let usuarioSemLancamentos = document.querySelector(".sem-lancamentos")
+const telaInicio = (email) => {
+    fetch(`/people/${email}/transaction/:id`)
+        .then(x => x.text())
+        .then(JSON.parse)
+        .then(dado => {
+            let usuarioLancamentos = document.querySelector(".com-lancamentos")
+            let usuarioSemLancamentos = document.querySelector(".sem-lancamentos")
 
-//             if (dado.transacao.length <= 0) {
-//                 usuarioLancamentos.style.display = "none"
-//                 usuarioSemLancamentos.style.display = "inline"
-//             } else {
-//                 usuarioSemLancamentos.style.display = "none"
-//                 usuarioLancamentos.style.display = "inline"
-//             }
-//         })
+            if (dado.transacao.length <= 0) {
+                usuarioLancamentos.style.display = "none"
+                usuarioSemLancamentos.style.display = "inline"
+            } else {
+                usuarioSemLancamentos.style.display = "none"
+                usuarioLancamentos.style.display = "inline"
+            }
+        })
 
-// }
+}
 
 const emailMarta = "martadaconceicaotonet@gmail.com"
 const emailCaio = "caio@kkkrying.com"
