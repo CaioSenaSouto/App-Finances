@@ -39,6 +39,17 @@ exports.buscaId = (req, res) => {
     })
 }
 
+//fazendo get por email
+exports.buscaEmail = (req, res) => {
+    Pessoa.findOne({ 'email': req.params.email }, function (erro, pessoa) {
+        if (erro) {
+            res.status(404).send({ erro: 'Dados não encontrado' })
+        } else {
+            res.status(200).send({ pessoa })
+        }
+    })
+}
+
 //Código update para atualizar dados
 exports.atualizar = (req, res) => {
     Pessoa.findOneAndUpdate({ '_id': req.params.id }, req.body, { new: true }, function (erro, atualizado) {

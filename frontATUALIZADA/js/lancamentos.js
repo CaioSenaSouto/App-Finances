@@ -87,17 +87,17 @@ const usuarioLogado = (id) => {
         })
 }
 
-const usuarioInfo = (id) => {
-    fetch(`http://localhost:3000/people/${id}`)
-        .then(x => x.text())
-        .then(JSON.parse)
-        .then(data => {
-            usuario = data.pessoa
-            consulta.porUsuario()
-        })
-}
+// const usuarioInfo = (id) => {
+//     fetch(`http://localhost:3000/people/${id}`)
+//         .then(x => x.text())
+//         .then(JSON.parse)
+//         .then(data => {
+//             usuario = data.pessoa
+//             consulta.porUsuario()
+//         })
+// }
 
 
 
 usuarioLogado("61b9fd250870d00cc83a7df8")
-usuarioInfo("61b9fd250870d00cc83a7df8")
+// usuarioInfo("61b9fd250870d00cc83a7df8")

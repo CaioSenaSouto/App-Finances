@@ -19,7 +19,7 @@
 
 // alterar para receber array de lançamentos do usuário
 const telaInicio = (email) => {
-    fetch(`http://localhost:3000/people/email/transaction/${email}`)
+    fetch(`/people/${email}/transaction/:id`)
         .then(x => x.text())
         .then(JSON.parse)
         .then(dado => {
@@ -45,4 +45,4 @@ const emailGerman = "german@neon.com"
 const emailPam = "pamela@dosteclados.com"
 
 // telaInicio(emailGe)
-telaInicio(emailCaio)
+// telaInicio(emailTai)
