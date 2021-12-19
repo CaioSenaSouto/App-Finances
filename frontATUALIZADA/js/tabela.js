@@ -113,6 +113,22 @@ const Transaction = {
 
 const DOM = {
     transactionsContainer: document.querySelector('#table tbody'),
+    addHeader() {
+        const tr = document.createElement('tr')
+        tr.innerHTML = DOM.innerHTMLHeader()
+        DOM.transactionsContainer.appendChild(tr)
+    },
+    innerHTMLHeader() {
+        const html = `
+        <tr>
+        <th>Título</th>
+        <th>Custo</th>
+        <th>Data</th>
+        <th>Ações</th>
+        </tr>`
+
+        return html
+    },
     addTransaction(transaction, index) {
         transaction.date = transaction.data.slice(0, 10)
         transaction.valor = transaction.valor
@@ -173,7 +189,8 @@ const Utils = {
 
 const App = {
     init() {
-        if (Transaction.all) {
+        if (Transaction.all?.length) {
+            DOM.addHeader()
             Transaction.all.forEach((transaction, index) => {
                 DOM.addTransaction(transaction, index)
             });
