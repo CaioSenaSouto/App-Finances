@@ -4,7 +4,7 @@
   
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/CaioSenaSouto/App-Finances/blob/main/LICENSE)  
   
-![TechTalents](https://github.com/CaioSenaSouto/App-Finances/blob/main/frontATUALIZADA/assets/Tech%20Talents.png =2718x3498)
+<img src="frontATUALIZADA/assets/Tech%20Talents.png" width="2718" height="3498">
   
 </div>
 
@@ -18,15 +18,17 @@
 
 ## Sobre o Produto
 
-### <p> Está cansado de anotar as suas contas financeiras no papel? Precisa de algo mais prático e fácil para te ajudar no dia a dia? Temos a solução! 
-  O App Finances é uma aplicação web e mobile construida na etapa 2 da primeira edição Tech Talents, evento organizado pela Fintech Neon, com ela você pode:
-  - Cadastrar os valores, a data e a descrição.
-  - Editar e excluir informações dos seus lançamentos.
-  - Acompanhar e controlar seus gastos em poucos segundos.
-  
-### O nosso aplicativo é totalmente GRATUITO e disponível para celular, tablet e desktop. 
+### <p> Está cansado de anotar as suas contas financeiras no papel? Precisa de algo mais prático e fácil para te ajudar no dia a dia? Temos a solução!
+
+O App Finances é uma aplicação web e mobile construida na etapa 2 da primeira edição Tech Talents, evento organizado pela Fintech Neon, com ela você pode:
+
+- Cadastrar os valores, a data e a descrição.
+- Editar e excluir informações dos seus lançamentos.
+- Acompanhar e controlar seus gastos em poucos segundos.
+
+### O nosso aplicativo é totalmente GRATUITO e disponível para celular, tablet e desktop.
+
 ### Link para testar o nosso produto desenvolvido pensando em você e no seu dinheiro 💰!
-  
 
 [![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)](https://teamv-finance.herokuapp.com/)
 
@@ -71,7 +73,8 @@ npm start
 ```
 
 ### Contribuidores
-- Caio Sena 
+
+- Caio Sena
 - Gessica Leite
 - German
 - Marta Tonet
