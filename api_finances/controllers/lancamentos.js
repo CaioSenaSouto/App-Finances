@@ -9,7 +9,7 @@ exports.novoLancamento = (req, res) => {
         if (erro) {
             res.status(400).send({ erro })
         } else {
-            res.status(201).send({ transacao })
+            res.status(200).send({ transacao })
         }
     })
 }
@@ -21,7 +21,7 @@ exports.busca = (req, res) => {
         if (erro) {
             res.status(404).send({ erro: 'Nenhum lançamento encontrado' })
         } else {
-            res.status(302).send({ transacao })
+            res.status(200).send({ transacao })
         }
     })
 }
@@ -33,7 +33,7 @@ exports.buscaEmail = (req, res) => {
         if (erro) {
             res.status(404).send({ erro: 'Usuário sem lançamentos' })
         } else {
-            res.status(302).send({ transacao })
+            res.status(200).send({ transacao })
         }
     })
 }
@@ -45,7 +45,7 @@ exports.atualizar = (req, res) => {
         if (erro) {
             res.status(400).send({ erro: 'Não atualizado' })
         } else {
-            res.status(201).send({ atualizado })
+            res.status(200).send({ atualizado })
         }
     })
 }
@@ -57,7 +57,7 @@ exports.apagar = (req, res) => {
         if (erro) {
             res.status(400).send({ erro: 'Transacao não encontrada' })
         } else {
-            res.status(202).send(deletado)
+            res.status(200).send(deletado)
         }
     })
 }

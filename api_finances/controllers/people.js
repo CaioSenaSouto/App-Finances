@@ -11,7 +11,7 @@ exports.novoCliente = (req, res) => {
         if (erro) {
             res.status(400).send({ erro })
         } else {
-            res.status(201).send({ pessoa })
+            res.status(200).send({ pessoa })
         }
     })
 }
@@ -21,9 +21,9 @@ exports.novoCliente = (req, res) => {
 exports.busca = (req, res) => {
     Pessoa.find({}, (erro, pessoa) => {
         if (erro) {
-            res.status(404).send({ erro: 'Nenhum registro encontarado' })
+            res.status(404).send({ erro: 'Nenhum registro encontrado' })
         } else {
-            res.status(302).send({ pessoa })
+            res.status(200).send({ pessoa })
         }
     })
 }
@@ -32,7 +32,7 @@ exports.busca = (req, res) => {
 exports.buscaId = (req, res) => {
     Pessoa.findOne({ '_id': req.params.id }, function (erro, pessoa) {
         if (erro) {
-            res.status(404).send({ erro: 'Dados não encontrado' })
+            res.status(404).send({ erro: 'Dado não encontrado' })
         } else {
             res.status(200).send({ pessoa })
         }
@@ -43,7 +43,7 @@ exports.buscaId = (req, res) => {
 exports.buscaEmail = (req, res) => {
     Pessoa.findOne({ 'email': req.params.email }, function (erro, pessoa) {
         if (erro) {
-            res.status(404).send({ erro: 'Dados não encontrado' })
+            res.status(404).send({ erro: 'Dados não encontrados' })
         } else {
             res.status(200).send({ pessoa })
         }
@@ -56,7 +56,7 @@ exports.atualizar = (req, res) => {
         if (erro) {
             res.status(400).send({ erro: 'Não atualizado' })
         } else {
-            res.status(201).send({ atualizado })
+            res.status(200).send({ atualizado })
         }
     })
 }
@@ -65,9 +65,9 @@ exports.atualizar = (req, res) => {
 exports.apagar = (req, res) => {
     Pessoa.deleteOne({" _id": req.params.id }, function (erro, deletado) {
         if (erro) {
-            res.status(400).send({ erro: 'Cliente não encontrado' })
+            res.status(400).send({ erro: 'Pessoa não encontrada' })
         } else {
-            res.status(202).send(deletado)
+            res.status(200).send(deletado)
         }
     })
 }
