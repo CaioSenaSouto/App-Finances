@@ -135,7 +135,6 @@ const Transaction = {
         if (saldo > 0) {
             document.getElementById("dinheiro").style.color = "green" 
         } else {
-            console.log("negativo")
             document.getElementById("dinheiro").style.color = "red"
         }
         return saldo.toFixed(2)
