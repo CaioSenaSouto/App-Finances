@@ -1,50 +1,36 @@
-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 2rem auto;
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 2rem auto;
 }
-
-/* 
-label{
-    justify-content: left;
-    font-size: 2rem;
-    padding: 1rem;
-}
-
-input{
-    margin-bottom: 2rem;
-    padding: 1rem;
-    width: 300px;
-    height: 50px;
-} */
 
 div.input {
-    padding: 5px;
-    margin-top: 1.5rem;
-    position: relative;
-    height: 80px;
-  }
+  padding: 5px;
+  margin-top: 1.5rem;
+  position: relative;
+  height: 80px;
+}
 
 #senha,
 #email {
-    border-radius: 5px;
-    border: none;
-    padding: 10px;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem !important;
-    height: 80px;
-    width: 80%;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem !important;
+  height: 80px;
+  width: 80%;
 }
 
 .usuario-login,
 .senha-login {
-    position: absolute;
-    top: 35px;
-    left: 3.20rem;
-    color: black;
-    transition: 0.4s;
-} 
+  position: absolute;
+  top: 35px;
+  left: 3.2rem;
+  color: black;
+  transition: 0.4s;
+}
 
 input:focus ~ label,
 input:valid ~ label {
@@ -55,5 +41,5 @@ input:valid ~ label {
 }
 
 #botao {
-    margin-top: 70px !important;
+  margin-top: 70px !important;
 }
