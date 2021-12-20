@@ -45,6 +45,10 @@ header {
   justify-content: space-between;
 }
 
+#usuario {
+  font-size: 1.4rem;
+}
+
 .cor-texto {
   color: white;
   font-weight: bold;
