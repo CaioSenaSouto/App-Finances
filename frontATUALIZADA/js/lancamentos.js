@@ -38,24 +38,6 @@ for (let campo of campos) {
 document.querySelector("form").addEventListener("submit", e => {
     e.preventDefault()
 
-    // let url = 'http://localhost:3000/people/:email/transaction'
-    // let valor = document.getElementById('valor').value
-    // let data = document.getElementById('data').value
-    // let descricao = document.getElementById('desc').value
-    // let email = usuario.email
-
-    // const file = { valor, data, descricao, email }
-
-    // var req = {
-    //     method: 'POST',
-    //     body: JSON.stringify(file),
-    //     headers: {
-    //         'Content-Type': 'application/json'
-    //     }
-    // };
-
-    // fetch(url, req)
-
     async function lancaDados(email = "tailalima.ds@gmail.com") {
         const valor = document.getElementById("valor").value
         const valorPonto = valor.replace(',', '.')
@@ -87,17 +69,5 @@ const usuarioLogado = (id) => {
         })
 }
 
-// const usuarioInfo = (id) => {
-//     fetch(`http://localhost:3000/people/${id}`)
-//         .then(x => x.text())
-//         .then(JSON.parse)
-//         .then(data => {
-//             usuario = data.pessoa
-//             consulta.porUsuario()
-//         })
-// }
-
-
 
 usuarioLogado("61b9fd250870d00cc83a7df8")
-// usuarioInfo("61b9fd250870d00cc83a7df8")

@@ -17,6 +17,32 @@ const usuarioLogado = (id) => {
         })
 }
 
+// alterar para receber array de lançamentos do usuário
+const telaInicio = (email) => {
+    fetch(`/people/:email/transaction/${email}`)
+        .then(x => x.text())
+        .then(JSON.parse)
+        .then(dado => {
+            let usuarioLancamentos = document.querySelector(".com-lancamentos")
+            let usuarioSemLancamentos = document.querySelector(".sem-lancamentos")
+            if (dado.transacao?.length <= 0) {
+                usuarioSemLancamentos.style.display = "inline"
+            } else {
+                usuarioLancamentos.style.display = "inline"
+            }
+        })
+}
+
+const emailMarta = "martadaconceicaotonet@gmail.com"
+const emailCaio = "caio@kkkrying.com"
+const emailGe = "gessica@meuemail.com"
+const emailTai = "tailalima.ds@gmail.com"
+const emailGerman = "german@neon.com"
+const emailPam = "pamela@dosteclados.com"
+
+// telaInicio(emailGe)
+telaInicio(emailTai)
+
 let match = [];
 const consulta = {
     porUsuario() {
@@ -88,7 +114,6 @@ const Transaction = {
                 income += parseFloat(transaction.valor);
             }
         })
-        console.log(income)
         return income.toFixed(2);
     },
 
@@ -100,7 +125,6 @@ const Transaction = {
                 expense += parseFloat(transaction.valor);
             }
         })
-        console.log(expense)
         return expense.toFixed(2);
 
     },
@@ -149,7 +173,6 @@ const DOM = {
 
         const CSSclass = transaction.valor > 0 ? "entrada" : "saida";
 
-        // const CSSnumber = transaction.custo > 0 ? "green" : "red";
         const CSSnumber = transaction.valor > 0 ? "green" : "red";
 
         const valor = Utils.formatCurrency(transaction.valor)
