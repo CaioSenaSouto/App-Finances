@@ -60,6 +60,16 @@ header {
   font-weight: bold;
 }
 
+.container {
+  background: rgba(245, 245, 245, 0.9);
+  border-radius: 5px;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 70px;
+  margin-bottom: 25px;
+  padding: 40px 64px;
+}
+
 .container-saldo {
   background: rgba(245, 245, 245, 0.9);
   border-radius: 5px;
